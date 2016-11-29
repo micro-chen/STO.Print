@@ -1,0 +1,645 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{690EF14B-320E-439A-B0A5-3D956084DC6A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DotNet.Business</RootNamespace>
+    <AssemblyName>DotNet.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>Redis,ReadOnlyRedis</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Jurassic">
+      <HintPath>..\External\Jurassic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ZTO.ZTO-SITE-SEARCH\DotNet\External\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\DOTNET\DotNet.CommonV4.2\External\RedisLib3.9\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\DOTNET\DotNet.CommonV4.2\External\RedisLib3.9\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Redis, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\DOTNET\DotNet.CommonV4.2\External\RedisLib3.9\ServiceStack.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\DOTNET\DotNet.CommonV4.2\External\RedisLib3.9\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="SMS.Business, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\SMS.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractServiceFactory.cs" />
+    <Compile Include="Caching\PooledRedisHelper.CallLimit.cs" />
+    <Compile Include="Caching\PooledRedisHelper.Mobile.cs" />
+    <Compile Include="Caching\PooledRedisHelper.Permission.cs" />
+    <Compile Include="Caching\PooledRedisHelper.Spelling.cs" />
+    <Compile Include="Caching\PooledRedisHelper.Message.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseContactDetailsManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseContactManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseLogManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseStationManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseLanguageManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseUserIdentityAuditManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseBillPushManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseCommentManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BaseExportDataManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseFileManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BaseFolderManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BaseItemDetailsManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BaseItemsManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BaseLoginLogManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseMessageManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BaseMessageRecentManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseModifyRecordManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseModuleManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BaseNewsManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BaseOrganizeGisManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseOrganizeManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BaseOrganizeExpressManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseParameterManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BasePermissionManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BasePermissionScopeManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BaseRoleManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BaseSequenceManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BaseStaffManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BaseUserExpressManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseTableColumnsManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BaseUserAddressManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BaseOrganizeLogOnManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseUserOrganizeManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BaseUserRoleManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Auto\BaseRoleOrganize.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseDepartmentManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseAreaProvinceMarkManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseServicesLicenseManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\HRCheckInManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseContactTargetManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Permission\BaseOrganizePermissionScopeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BaseOrganizePermissionManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BaseOrganizeScopeManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.Permission\BasePermissionManager.Caching.Redis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BasePermissionManager.cs" />
+    <Compile Include="DataAccess\Manager.Permission\BasePermissionManager.User.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BasePermissionScopeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BasePermissionScopeManager.User.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BaseRoleModuleScopeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BaseRoleOrganizeScopeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BaseRolePermissionManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BaseRolePermissionScopeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BaseRoleRoleScopeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BaseRoleScopeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BaseRoleUserScopeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BaseUserModuleScopeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BaseUserOrganizeScopeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BaseUserPermissionManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BaseUserPermissionScopeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BaseUserRoleScopeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BaseUserScopeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.Permission\BaseUserUserScopeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.User\BaseUserContactManager.Caching.Redis.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserLogonExtendManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserLogonExtendManager.Cache.Redis.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserLogOnManager.SignOut.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.Caching.Redis.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.LogOn.Expand.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.Leave.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.AfterDeleted.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.AfterUpdate.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.AfterAdd.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserContactManager.Update.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserLogOnManager.Update.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserLogOnManager.UpdateVisitDate.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserLogOnManager.Caching.Redis.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.CheckMAC.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.CheckUser.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.Statistics.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.Synchronous.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.RefreshCache.cs" />
+    <Compile Include="DataAccess\Manager\BaseOrganizeLogOnManager.cs" />
+    <Compile Include="DataAccess\Manager\BaseServicesLicenseManager.CheckService.cs" />
+    <Compile Include="DataAccess\Manager\BaseAreaManager.Caching.Redis.cs" />
+    <Compile Include="DataAccess\Manager\BaseAreaProvinceMarkManager.Caching.Redis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseAreaProvinceMarkManager.cs" />
+    <Compile Include="DataAccess\Manager\BaseContactDetailsManager.cs" />
+    <Compile Include="DataAccess\Manager\BaseContactManager.cs" />
+    <Compile Include="DataAccess\Manager\BaseDepartmentManager.Caching.Redis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseModuleManager.Caching.Redis.cs" />
+    <Compile Include="DataAccess\Manager\BaseOrganizeManager.Caching.Redis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseRoleManager.Caching.Redis.cs" />
+    <Compile Include="DataAccess\Manager\BaseServicesLicenseManager.cs" />
+    <Compile Include="DataAccess\Manager\BaseStationManager.cs" />
+    <Compile Include="DataAccess\Manager\BaseLanguageManager.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserLogOnManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.User\BaseUserLogOnManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.Add.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.ChangePassword.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.CheckIP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.Delete.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.Duty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.LogOn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.Organize.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.Role.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.SetPassword.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.Update.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.VerificationCode.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserContactManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserContactManager.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.Search.cs" />
+    <Compile Include="DataAccess\Manager.User\BaseUserManager.Mail.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseHolidaysManager.Auto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseHolidaysManager.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseHolidaysManager.Web.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseUserBillManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseUserBillManager.Mail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseUserBillManager.Message.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseUserBillManager.WorkFlow.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowActivityManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowActivityManager.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowActivityManager.Web.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowBillTemplateManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowBillTemplateManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowCurrentManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowCurrentManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowHistoryManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowHistoryManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowManager.AuditComplete.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowManager.AuditPass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowManager.AuditQuash.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowManager.AuditReject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowManager.AuditStatr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowManager.AuditTransmit.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowManager.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowManager.FreeAudit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowManager.FreeAuditComplete.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowManager.FreeAuditPass2.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowManager.FreeAuditReject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowManager.FreeAuditStatr.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowProcessManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowProcessManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowProcessManager.Web.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowStepManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\BaseWorkFlowStepManager.cs" />
+    <Compile Include="DataAccess\Manager.WorkFlow\UserReportManager.WorkFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseBillPushManager.cs" />
+    <Compile Include="DataAccess\Manager\BaseCommentManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseExceptionManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseFileManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseFolderManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseItemDetailsManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseItemDetailsManager.Caching.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseItemsManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseLoginLogManager.cs" />
+    <Compile Include="DataAccess\Manager\BaseLogManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseMessageManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseMessageRecentManager.cs" />
+    <Compile Include="DataAccess\Manager\BaseModuleManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseNewsManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseOrganizeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseOrganizeManager.Expand.cs" />
+    <Compile Include="DataAccess\Manager\BaseParameterManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseRoleManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseSequenceManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseStaffManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseStaffManager.Caching.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseTableColumnsManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager.User\BaseUserOrganizeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\Manager\BaseAreaManager.cs" />
+    <Compile Include="DataAccess\Manager.Auto\BaseAreaManager.Auto.cs" />
+    <Compile Include="DataAccess\Manager\BaseOrganizeManager.Area.cs" />
+    <Compile Include="DataAccess\Manager\BaseOrganizeManager.Role.cs" />
+    <Compile Include="DataAccess\Manager\BaseAreaManager.Map.cs" />
+    <Compile Include="DataAccess\Manager\BaseStaffManager.Search.cs" />
+    <Compile Include="DataAccess\Manager\BaseDepartmentManager.cs" />
+    <Compile Include="DataAccess\Manager\BaseOrganizeExpressManager.cs" />
+    <Compile Include="DataAccess\Manager\BaseOrganizeGisManager.cs" />
+    <Compile Include="DataAccess\Manager\BaseOrganizeManager.Update.cs" />
+    <Compile Include="DataAccess\Manager\BaseRoleManager.Update.cs" />
+    <Compile Include="DataAccess\Manager\BaseModuleManager.Update.cs" />
+    <Compile Include="DataAccess\Manager\BaseDepartmentManager.Update.cs" />
+    <Compile Include="DataAccess\Manager\BaseAreaManager.Update.cs" />
+    <Compile Include="DataAccess\Manager\BaseAreaProvinceMarkManager.Update.cs" />
+    <Compile Include="DataAccess\Manager\BaseMessageManager.Caching.Redis.cs" />
+    <Compile Include="DataAccess\Manager\BaseMessageManager.Broadcast.cs" />
+    <Compile Include="DataAccess\Manager\BaseContactManager.Caching.Redis.cs" />
+    <Compile Include="DataAccess\Manager\BaseSystemManager.cs" />
+    <Compile Include="DataAccess\Manager\BaseItemDetailsManager.Caching.Redis.cs" />
+    <Compile Include="DataAccess\Manager\BaseMessageManager.User.cs" />
+    <Compile Include="DataAccess\Manager\BaseOrganizeManager.Add.cs" />
+    <Compile Include="DataAccess\Manager\BaseOrganizeManager.AfterAdd.cs" />
+    <Compile Include="DataAccess\Manager\BaseOrganizeManager.AfterDeleted.cs" />
+    <Compile Include="DataAccess\Manager\BaseOrganizeManager.AfterUpdate.cs" />
+    <Compile Include="DataAccess\Manager\BaseRoleManager.RefreshCache.cs" />
+    <Compile Include="DataAccess\Manager\BaseOrganizeManager.RefreshCache.cs" />
+    <Compile Include="DataAccess\Manager\BaseModuleManager.RefreshCache.cs" />
+    <Compile Include="DataAccess\Manager\BaseParameterManager.RefreshCache.cs" />
+    <Compile Include="DataAccess\Manager\BaseParameterManager.Caching.Redis.cs" />
+    <Compile Include="DataAccess\Manager\HRCheckInManager.cs" />
+    <Compile Include="DataAccess\Manager\BaseContactTargetManager.cs" />
+    <Compile Include="DotNetService.WorkFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtilities\AreaUtilities.cs" />
+    <Compile Include="HttpUtilities\CommentUtilities.cs" />
+    <Compile Include="HttpUtilities\LogOnUtilities.cs" />
+    <Compile Include="HttpUtilities\LogUtilities.cs" />
+    <Compile Include="HttpUtilities\DbHelperUtilities.cs" />
+    <Compile Include="HttpUtilities\MessageUtilities.cs" />
+    <Compile Include="HttpUtilities\ItemDetailsUtilities.cs" />
+    <Compile Include="HttpUtilities\RoleUtilities.cs" />
+    <Compile Include="HttpUtilities\PermissionUtilities.cs" />
+    <Compile Include="HttpUtilities\DepartmentUtilities.cs" />
+    <Compile Include="HttpUtilities\ParameterUtilities.cs" />
+    <Compile Include="HttpUtilities\UserUtilities.cs" />
+    <Compile Include="HttpUtilities\OrganizeUtilities.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceFactory.WorkFlow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\AreaService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\ItemDetailsService.cs" />
+    <Compile Include="Service\ItemsService.cs" />
+    <Compile Include="Service\MobileService.ZTO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\ModifyRecordService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\PermissionService.Role.cs" />
+    <Compile Include="Service\PermissionService.User.cs" />
+    <Compile Include="Service\PermissionService.Resource.cs" />
+    <Compile Include="Service\PermissionService.Scope.cs" />
+    <Compile Include="Service\PermissionService.Organize.cs" />
+    <Compile Include="Service\ServicesLicenseService.cs" />
+    <Compile Include="Service\UserService.Role.cs" />
+    <Compile Include="Service\UserService.Organize.cs" />
+    <Compile Include="Service\RoleService.User.cs" />
+    <Compile Include="Service\WorkFlowActivityAdminService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\WorkFlowCurrentService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\WorkFlowProcessAdminService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\MobileService.cs" />
+    <Compile Include="Service\MessageService.User.cs" />
+    <Compile Include="Service\MessageService.Area.cs" />
+    <Compile Include="Service\MobileService.Account.cs" />
+    <Compile Include="Service\RoleService.Organize.cs" />
+    <Compile Include="Service\OrganizeService.Role.cs" />
+    <Compile Include="Service\DepartmentService.cs" />
+    <Compile Include="Service\StationService.cs" />
+    <Compile Include="Service\LanguageService.cs" />
+    <Compile Include="Utilities\BaseDbSortLogic.cs" />
+    <Compile Include="Caching\PooledRedisHelper.cs" />
+    <Compile Include="Utilities\BaseManager.GetExecuteReaderByPage.cs" />
+    <Compile Include="Utilities\DbLogic.ExecuteReaderByPage.cs" />
+    <Compile Include="Utilities\ServiceUtil.cs" />
+    <Compile Include="Utilities\ServiceInfo.cs" />
+    <Compile Include="Utilities\TableManager.cs" />
+    <Compile Include="Utilities\BaseManager.cs" />
+    <Compile Include="Utilities\BaseManager.GetList.cs" />
+    <Compile Include="Utilities\ConstraintUtil.cs" />
+    <Compile Include="Utilities\DbLogic.cs" />
+    <Compile Include="Utilities\IBaseManager.cs" />
+    <Compile Include="Utilities\SQLBuilder.NameValueCollection.cs" />
+    <Compile Include="DotNetService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceFactory.cs" />
+    <Compile Include="Service\ExceptionService.cs" />
+    <Compile Include="Service\FileService.cs" />
+    <Compile Include="Service\FolderService.cs" />
+    <Compile Include="Service\BaseItemDetailsService.cs" />
+    <Compile Include="Service\BaseItemsService.cs" />
+    <Compile Include="Service\LogOnService.cs" />
+    <Compile Include="Service\LogService.cs" />
+    <Compile Include="Service\MessageService.cs" />
+    <Compile Include="Service\ModuleService.cs" />
+    <Compile Include="Service\OrganizeService.cs" />
+    <Compile Include="Service\ParameterService.cs" />
+    <Compile Include="Service\PermissionService.cs" />
+    <Compile Include="Service\PermissionService.Test.cs" />
+    <Compile Include="Service\RoleService.cs" />
+    <Compile Include="Service\SequenceService.cs" />
+    <Compile Include="Service\StaffService.cs" />
+    <Compile Include="Service\TableColumnsService.cs" />
+    <Compile Include="Service\UserService.cs" />
+    <Compile Include="Utilities\BaseManager.Exists.cs" />
+    <Compile Include="Utilities\BaseManager.Delete.cs" />
+    <Compile Include="Utilities\BaseManager.GetProperties.cs" />
+    <Compile Include="Utilities\BaseManager.SetProperty.cs" />
+    <Compile Include="Utilities\BaseManager.GetProperty.cs" />
+    <Compile Include="Utilities\BaseManager.GetDataTable.cs" />
+    <Compile Include="Utilities\BaseManager.DbHelper.cs" />
+    <Compile Include="Utilities\BaseManager.GetDataTableByPage.cs" />
+    <Compile Include="Utilities\DbLogic.Exists.cs" />
+    <Compile Include="Utilities\DbLogic.Delete.cs" />
+    <Compile Include="Utilities\DbLogic.GetDataTable.cs" />
+    <Compile Include="Utilities\DbLogic.GetProperties.cs" />
+    <Compile Include="Utilities\DbLogic.SetProperty.cs" />
+    <Compile Include="Utilities\DbLogic.GetProperty.cs" />
+    <Compile Include="Utilities\DbLogic.IsModifed.cs" />
+    <Compile Include="Utilities\DbLogic.LockNoWait.cs" />
+    <Compile Include="Utilities\DbLogic.GetDataTableByPage.cs" />
+    <Compile Include="Utilities\DbLogic.ParentChildrens.cs" />
+    <Compile Include="Utilities\BaseManager.ParentChildrens.cs" />
+    <Compile Include="Utilities\BaseManager.PreviousNext.cs" />
+    <Compile Include="Utilities\SQLBuilder.KeyValuePair.cs" />
+    <Compile Include="Utilities\DbLogic.ExecuteReader.cs" />
+    <Compile Include="Utilities\SQLBuilder.cs" />
+    <Compile Include="Utilities\BaseManager.SetDeleted.cs" />
+    <Compile Include="Utilities\BaseManager.GetExecuteReader.cs" />
+    <Compile Include="WebUtilities\CurrentUserInfo.cs" />
+    <Compile Include="WebUtilities\Utilities.cs" />
+    <Compile Include="WebUtilities\Utilities.Interface.cs" />
+    <Compile Include="WebUtilities\Utilities.LogOn.Caching.Redis.cs" />
+    <Compile Include="WebUtilities\Utilities.ZTO.cs" />
+    <Compile Include="WebUtilities\Utilities.LogOn.cs" />
+    <Compile Include="WebUtilities\Utilities.DbHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DotNet.IService\DotNet.IService.csproj">
+      <Project>{C817A488-6668-48C3-A8D8-2B61C8300568}</Project>
+      <Name>DotNet.IService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DotNet.Model\DotNet.Model.csproj">
+      <Project>{F3734D22-79C5-4BE2-888D-139A49C08AC4}</Project>
+      <Name>DotNet.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DotNet.Utilities\DotNet.Utilities.csproj">
+      <Project>{2FB4C4A9-F14C-4CDD-9D0E-7C4E7CEBEBDD}</Project>
+      <Name>DotNet.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

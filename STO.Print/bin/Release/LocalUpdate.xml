@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Local>
+  <ServerDownUrl url="http://update.zto.cn:88/update/Print/" />
+  <ApplicationName name="ZTO.Print.exe" />
+  <Version>6.2015.08.25</Version>
+  <Files>
+    
+  </Files>
+</Local>

@@ -1,0 +1,10 @@
+C:\Users\yhl\Downloads\高仿QQ截图\CaptureImageToolDemo\CaptureImageTool\bin\Debug\CaptureImageTool.dll
+C:\Users\yhl\Downloads\高仿QQ截图\CaptureImageToolDemo\CaptureImageTool\bin\Debug\CaptureImageTool.pdb
+C:\Users\yhl\Downloads\高仿QQ截图\CaptureImageToolDemo\CaptureImageTool\obj\Debug\CaptureImageTool.csprojResolveAssemblyReference.cache
+C:\Users\yhl\Downloads\高仿QQ截图\CaptureImageToolDemo\CaptureImageTool\obj\Debug\CSharpWin_JD.CaptureImage.CaptureImageTool.resources
+C:\Users\yhl\Downloads\高仿QQ截图\CaptureImageToolDemo\CaptureImageTool\obj\Debug\CSharpWin_JD.CaptureImage.ColorSelector.resources
+C:\Users\yhl\Downloads\高仿QQ截图\CaptureImageToolDemo\CaptureImageTool\obj\Debug\CSharpWin_JD.CaptureImage.DrawToolsControl.resources
+C:\Users\yhl\Downloads\高仿QQ截图\CaptureImageToolDemo\CaptureImageTool\obj\Debug\CSharpWin_JD.CaptureImage.Properties.Resources.resources
+C:\Users\yhl\Downloads\高仿QQ截图\CaptureImageToolDemo\CaptureImageTool\obj\Debug\CaptureImageTool.csproj.GenerateResource.Cache
+C:\Users\yhl\Downloads\高仿QQ截图\CaptureImageToolDemo\CaptureImageTool\obj\Debug\CaptureImageTool.dll
+C:\Users\yhl\Downloads\高仿QQ截图\CaptureImageToolDemo\CaptureImageTool\obj\Debug\CaptureImageTool.pdb

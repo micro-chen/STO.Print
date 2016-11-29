@@ -1,0 +1,4 @@
+C:\Users\yhl\Desktop\申通工作文件\申通打印助手\STO.Print\DotNet.UrlMgr\bin\Release\DotNet.UrlMgr.exe
+C:\Users\yhl\Desktop\申通工作文件\申通打印助手\STO.Print\DotNet.UrlMgr\bin\Release\DotNet.UrlMgr.pdb
+C:\Users\yhl\Desktop\申通工作文件\申通打印助手\STO.Print\DotNet.UrlMgr\obj\Release\DotNet.UrlMgr.exe
+C:\Users\yhl\Desktop\申通工作文件\申通打印助手\STO.Print\DotNet.UrlMgr\obj\Release\DotNet.UrlMgr.pdb

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F3734D22-79C5-4BE2-888D-139A49C08AC4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DotNet.Model</RootNamespace>
+    <AssemblyName>DotNet.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseAreaEntity.cs" />
+    <Compile Include="BaseBillPushEntity.cs" />
+    <Compile Include="BaseCommentEntity.cs" />
+    <Compile Include="BaseContactDetailsEntity.cs" />
+    <Compile Include="BaseContactEntity.cs" />
+    <Compile Include="BaseStationEntity.cs" />
+    <Compile Include="BaseExceptionEntity.cs" />
+    <Compile Include="BaseExportDataEntity.cs" />
+    <Compile Include="BaseFileEntity.cs" />
+    <Compile Include="BaseFolderEntity.cs" />
+    <Compile Include="BaseHolidaysEntity.cs" />
+    <Compile Include="BaseItemDetailsEntity.cs" />
+    <Compile Include="BaseItemsEntity.cs" />
+    <Compile Include="BaseLanguageEntity.cs" />
+    <Compile Include="BaseLogEntity.cs" />
+    <Compile Include="BaseLoginLogEntity.cs" />
+    <Compile Include="BaseMessageEntity.cs" />
+    <Compile Include="BaseMessageRecentEntity.cs" />
+    <Compile Include="BaseModifyRecordEntity.cs" />
+    <Compile Include="BaseModuleEntity.cs" />
+    <Compile Include="BaseNewsEntity.cs" />
+    <Compile Include="BaseOrganizeEntity.cs" />
+    <Compile Include="BaseOrganizeEntity.Expand.cs" />
+    <Compile Include="BaseOrganizeGisEntity.cs" />
+    <Compile Include="BaseOrganizeScopeEntity.cs" />
+    <Compile Include="BaseOrganizeExpressEntity.cs" />
+    <Compile Include="BaseParameterEntity.cs" />
+    <Compile Include="BasePermissionEntity.cs" />
+    <Compile Include="BasePermissionScopeEntity.cs" />
+    <Compile Include="BaseRoleEntity.cs" />
+    <Compile Include="BaseRoleOrganizeEntity.cs" />
+    <Compile Include="BaseSequenceEntity.cs" />
+    <Compile Include="BaseStaffEntity.cs" />
+    <Compile Include="BaseUserExpressEntity.cs" />
+    <Compile Include="BaseTableColumnsEntity.cs" />
+    <Compile Include="BaseUserAddressEntity.cs" />
+    <Compile Include="BaseUserContactEntity.cs" />
+    <Compile Include="BaseUserEntity.cs" />
+    <Compile Include="BaseUserIdentityAuditEntity.cs" />
+    <Compile Include="BaseUserLogOnEntity.cs" />
+    <Compile Include="BaseUserLogonExtendEntity.cs" />
+    <Compile Include="BaseUserOrganizeEntity.cs" />
+    <Compile Include="BaseUserRoleEntity.cs" />
+    <Compile Include="BaseWorkFlowActivityEntity.cs" />
+    <Compile Include="BaseWorkFlowAuditInfo.cs" />
+    <Compile Include="BaseWorkFlowBillTemplateEntity.cs" />
+    <Compile Include="BaseWorkFlowCurrentEntity.cs" />
+    <Compile Include="BaseWorkFlowHistoryEntity.cs" />
+    <Compile Include="BaseWorkFlowProcessEntity.cs" />
+    <Compile Include="BaseWorkFlowStepEntity.cs" />
+    <Compile Include="BaseServicesLicenseEntity.cs" />
+    <Compile Include="BaseOrganizeLogOnEntity.cs" />
+    <Compile Include="HRCheckInEntity.cs" />
+    <Compile Include="Utilities\UserLogOnResult.cs" />
+    <Compile Include="ZTO\OrderPhoneEntity.cs" />
+    <Compile Include="Utilities\DbParameter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\SqlExecute.cs" />
+    <Compile Include="Utilities\BaseEntity.cs" />
+    <Compile Include="Utilities\DRDataReader.cs" />
+    <Compile Include="Utilities\DRDataRow.cs" />
+    <Compile Include="Utilities\FieldDescription.cs" />
+    <Compile Include="Utilities\FieldExtensions.cs" />
+    <Compile Include="Utilities\IBaseEntity.cs" />
+    <Compile Include="Utilities\IDataRow.cs" />
+    <Compile Include="BaseDepartmentEntity.cs" />
+    <Compile Include="ZTO\OrderPhoneExtendEntity.cs" />
+    <Compile Include="BaseAreaProvinceMarkEntity.cs" />
+    <Compile Include="BaseContactTargetEntity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DotNet.Utilities\DotNet.Utilities.csproj">
+      <Project>{2FB4C4A9-F14C-4CDD-9D0E-7C4E7CEBEBDD}</Project>
+      <Name>DotNet.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

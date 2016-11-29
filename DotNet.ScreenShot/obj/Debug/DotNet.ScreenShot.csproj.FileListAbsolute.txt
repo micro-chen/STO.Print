@@ -1,0 +1,9 @@
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\DotNet.ScreenShot\bin\Debug\DotNet.ScreenShot.dll
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\DotNet.ScreenShot\bin\Debug\DotNet.ScreenShot.pdb
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\DotNet.ScreenShot\obj\Debug\DotNet.ScreenShot.CaptureImageTool.resources
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\DotNet.ScreenShot\obj\Debug\DotNet.ScreenShot.ColorSelector.resources
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\DotNet.ScreenShot\obj\Debug\DotNet.ScreenShot.DrawToolsControl.resources
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\DotNet.ScreenShot\obj\Debug\DotNet.ScreenShot.Properties.Resources.resources
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\DotNet.ScreenShot\obj\Debug\DotNet.ScreenShot.csproj.GenerateResource.Cache
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\DotNet.ScreenShot\obj\Debug\DotNet.ScreenShot.dll
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\DotNet.ScreenShot\obj\Debug\DotNet.ScreenShot.pdb

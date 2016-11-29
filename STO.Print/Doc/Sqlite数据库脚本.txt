@@ -1,0 +1,201 @@
+﻿CREATE TABLE [ZTO_PRINT_BILL] (
+[Id] integer PRIMARY KEY, 
+[BILL_CODE] VARCHAR2(20)  NULL,             		-- 单号
+[SEND_DATE] VARCHAR2(30)  NULL, 				    -- 发件日期
+[SEND_SITE] VARCHAR2(30)  NULL,             		-- 发件网点
+[SEND_MAN] VARCHAR2(30)  NULL,          			-- 发件人姓名
+[SEND_DEPARTURE] VARCHAR2(30) NULL,        			-- 始发地
+[SEND_PROVINCE] VARCHAR2(30)  NULL,     			-- 发件省份
+[SEND_CITY] VARCHAR2(50)  NULL, 	   	   			-- 发件城市
+[SEND_COUNTY] VARCHAR2(30)  NULL, 	   			-- 发件区县
+[SEND_COMPANY] VARCHAR2(30)  NULL,         			-- 发件人单位名称
+[SEND_DEPARTMENT] VARCHAR2(30)  NULL,      			-- 发件人单位部门
+[SEND_PHONE] VARCHAR2(20)  NULL, 	   			-- 发件人电话或手机
+[SEND_POSTCODE] VARCHAR2(20) NULL, 	       			-- 发件人邮编
+[SEND_ADDRESS] VARCHAR2(200)  NULL,     			-- 发件人详细地址（上海上海市青浦区华志璐1889号）
+[RECEIVE_MAN] VARCHAR2(30)  NULL,       			-- 收件人姓名
+[RECEIVE_DESTINATION] VARCHAR2(30) NULL,   			-- 目的地
+[RECEIVE_PROVINCE] VARCHAR2(30)  NULL,  			-- 收件省份
+[RECEIVE_CITY] VARCHAR2(50)  NULL,      			-- 收件城市
+[RECEIVE_COUNTY] VARCHAR2(30)  NULL,    			-- 收件区县
+[RECEIVE_PHONE] VARCHAR2(20)  NULL,     			-- 收件人电话或手机	
+[RECEIVE_COMPANY] VARCHAR2(30)  NULL,         			-- 收件人单位名称
+[RECEIVE_POSTCODE] VARCHAR2(20) NULL, 	   			-- 收件人邮编
+[RECEIVE_ADDRESS] VARCHAR2(200)  NULL,  			-- 收件人详细地址（江苏省苏州市平江区现代大厦1001号）
+[GOODS_NAME] VARCHAR2(30), 			       			-- 物品类型
+[BIG_PEN] VARCHAR2(30), 			       			-- 大头笔
+[LENGTH] NUMBER(8,0) DEFAULT 0, 					-- 长
+[WIDTH] NUMBER(8,0) DEFAULT 0, 						-- 宽
+[HEIGHT] NUMBER(8,0) DEFAULT 0, 					-- 高
+[WEIGHT] NUMBER(8,0) DEFAULT 0, 					-- 重量
+[PAYMENT_TYPE] VARCHAR2(30) DEFAULT ('现金'),		-- 付款方式
+[TRAN_FEE] DECIMAL(10,2) DEFAULT 0,        			-- 运费（快递费）
+[TOTAL_NUMBER] NUMBER(8,0) DEFAULT 1, 		   		-- 数量
+[REMARK] VARCHAR2(100), 				   			-- 备注	
+[CREATEUSERNAME] VARCHAR2(30)  NULL,    			-- 创建人姓名
+[CREATESITE] VARCHAR2(30)  NULL,        			-- 创建网点
+[CREATEON] DATE  NULL, 				   			-- 创建时间
+[MODIFIEDUSERNAME] VARCHAR2(30), 		   			-- 修改人姓名
+[MODIFIEDSITE] VARCHAR2(30), 			   			-- 修改网点
+[MODIFIEDON] DATE						   			-- 修改时间
+);
+
+发件人和收件人sql
+CREATE TABLE [ZTO_USER] (
+[Id] integer PRIMARY KEY, 			    
+[RealName] VARCHAR2(30)  NULL,          		-- 姓名
+[PROVINCE] VARCHAR2(30)  NULL,     		 -- 省份
+[PROVINCE_ID] VARCHAR2(30)  NULL,     		 -- 省份ID
+[CITY] VARCHAR2(50)  NULL, 	   	   		 -- 城市
+[CITY_ID] VARCHAR2(50)  NULL, 	   	   		 -- 城市ID
+[COUNTY] VARCHAR2(30)  NULL, 	   		 -- 区县
+[COUNTY_ID] VARCHAR2(30)  NULL, 	   		 -- 区县ID
+[COMPANY] VARCHAR2(30)  NULL,         	 	-- 单位名称
+[DEPARTMENT] VARCHAR2(30)  NULL,      	 	-- 单位部门
+[PHONE] VARCHAR2(20)  NULL, 	   		 -- 电话或手机
+[POSTCODE] VARCHAR2(20) NULL, 	        	-- 发件人邮编
+[ADDRESS] VARCHAR2(200)  NULL,     		 -- 详细地址
+[IsSendOrReceive] VARCHAR2(200)  NULL,   	-- 是否发件人 1：发件人 0：收件人
+[REMARK] VARCHAR2(100), 				  			-- 备注	
+[CREATEUSERNAME] VARCHAR2(30)  NULL,    		-- 创建人姓名
+[CREATEON] DATE  NULL, 				    	-- 创建时间
+[MODIFIEDUSERNAME] VARCHAR2(30), 		  			-- 修改人姓名
+[MODIFIEDON] DATE							 			-- 修改时间
+);
+
+快递公司或物流公司sql
+CREATE TABLE [BASE_EXPRESS] (
+[Id] integer PRIMARY KEY, 			    
+[NAME] VARCHAR2(30)  NULL,          		-- 名称
+[SHORTNAME]  VARCHAR2(30)  NULL,          		-- 简称（STO这样的）
+[LAYER] VARCHAR2(30)  NULL,     		 -- 优先级
+[PROVINCE_ID] VARCHAR2(30)  NULL,     		 -- 省份ID
+[CITY] VARCHAR2(50)  NULL, 	   	   		 -- 城市
+[CITY_ID] VARCHAR2(50)  NULL, 	   	   		 -- 城市ID
+[COUNTY] VARCHAR2(30)  NULL, 	   		 -- 区县
+[COUNTY_ID] VARCHAR2(30)  NULL, 	   		 -- 区县ID
+[ADDRESS] VARCHAR2(200)  NULL,     		 -- 详细地址
+[REMARK] VARCHAR2(100), 				  			-- 备注	
+[CREATEUSERNAME] VARCHAR2(30) NULL,    		-- 创建人姓名
+[CREATEON] DATE  NULL, 				    	-- 创建时间
+[MODIFIEDUSERNAME] VARCHAR2(30), 		  			-- 修改人姓名
+[MODIFIEDON] DATE							 			-- 修改时间
+);
+CREATE INDEX [I_Express_Id] ON [BASE_EXPRESS] ([Id]);
+
+
+模板管理信息sql
+CREATE TABLE [BASE_TEMPLATE] (
+[Id] integer PRIMARY KEY, 			    
+[NAME] VARCHAR2(30)  NULL,          		 -- 模板名称
+[NAME] VARCHAR2(30)  NULL,          		 -- 模板名称
+[EXPRESS_ID] integer  NULL,                 -- 所属快递公司
+[LAYER] VARCHAR2(30)  NULL,     		     -- 优先级
+[FILE_PATH] VARCHAR2(200)  NULL,     		 -- 文件路径
+[WIDTH] VARCHAR2(50)  NULL, 	   	   		 -- 模板宽度（实际面单的宽度）
+[LENGTH] VARCHAR2(50)  NULL, 	   	   		 -- 模板长度（实际面单的长度）
+[BACKGROUND_IMAGE_PATH] VARCHAR2(200)  NULL,  --背景图路径（背景图片文件路径）
+[REMARK] VARCHAR2(100), 				  	 -- 备注	
+[CREATEUSERNAME] VARCHAR2(30) NULL,    		-- 创建人姓名
+[CREATEON] DATE  NULL, 				    	-- 创建时间
+[MODIFIEDUSERNAME] VARCHAR2(30), 		  	 -- 修改人姓名
+[MODIFIEDON] DATE							  -- 修改时间
+);
+CREATE INDEX [I_TEMPLATE_Id] ON [BASE_TEMPLATE] ([Id]);
+
+--省市区
+
+ CREATE TABLE [BASEAREA] (
+                                        [Id] int NOT NULL ON CONFLICT REPLACE, 
+                                        [ParentId] int, 
+                                        [Code] nvarchar(50), 
+                                        [FullName] nvarchar(50) NOT NULL, 
+                                        [ShortName] nvarchar(50), 
+                                        [Layer] int, 
+                                        [Whole] smallint NOT NULL DEFAULT 0, 
+                                        [Send] smallint NOT NULL DEFAULT 0, 
+                                        [Receive] smallint NOT NULL DEFAULT 0, 
+                                        [Postalcode] nvarchar(10), 
+                                        [Province] nvarchar(50), 
+                                        [City] nvarchar(50), 
+                                        [District] nvarchar(50), 
+                                        [QuickQuery] nvarchar(100), 
+                                        [SimpleSpelling] nvarchar(50), 
+                                        [Longitude] nvarchar(16), 
+                                        [Latitude] nvarchar(16), 
+                                        [NetworkOrders] smallint, 
+                                        [AllowToPay] smallint NOT NULL DEFAULT 0, 
+                                        [MaxToPayment] int NOT NULL DEFAULT 0, 
+                                        [AllowGoodsPay] smallint NOT NULL DEFAULT 0, 
+                                        [MaxGoodsPayment] int NOT NULL DEFAULT 0, 
+                                        [ManageCompanyId] nvarchar(50), 
+                                        [ManageCompanyCode] nvarchar(50), 
+                                        [ManageCompany] nvarchar(50), 
+                                        [Mark] nvarchar(10), 
+                                        [OutOfRange] smallint, 
+                                        [DelayDay] INT NOT NULL DEFAULT 0, 
+                                        [Opening] INT DEFAULT 0, 
+                                        [Enabled] smallint NOT NULL DEFAULT 1, 
+                                        [AllowEdit] smallint, 
+                                        [AllowDelete] smallint, 
+                                        [IsPublic] smallint NOT NULL DEFAULT 1, 
+                                        [DeletionStateCode] smallint NOT NULL DEFAULT 0, 
+                                        [SortCode] int, 
+                                        [Description] nvarchar(200), 
+                                        [CreateOn] smalldatetime, 
+                                        [CreateUserId] nvarchar(20), 
+                                        [CreateBy] nvarchar(20), 
+                                        [ModifiedOn] smalldatetime, 
+                                        [ModifiedUserId] nvarchar(20), 
+                                        [ModifiedBy] nvarchar(20), 
+                                        [PrintMark] NVARCHAR(50), 
+                                        CONSTRAINT [] PRIMARY KEY ([Id]) ON CONFLICT REPLACE);
+
+CREATE INDEX [BaseArea_Layer] ON [BaseArea] ([Layer]);
+
+CREATE INDEX [BaseArea_ParentId] ON [BaseArea] ([ParentId]);
+
+CREATE INDEX [I_BaseArea_FULLNAME] ON [BaseArea] ([FullName]);
+
+CREATE INDEX [I_MaxToPayMent] ON [BaseArea] ([ParentId], [FullName]);
+
+--大头笔表
+CREATE TABLE BASEAREA_PROVINCEMARK 
+(
+    ID NUMBER(10) NOT NULL,
+    MARK varchar2(200) NULL,
+    ENABLED NUMBER(1) NOT NULL,
+    PROVINCE varchar2(50) NULL,
+    PROVINCEID NUMBER(10) NULL,
+    AREAID NUMBER(10) NULL,
+    AREA varchar2(50) NULL,
+    DESCRIPTION varchar2(800) NULL,
+    CREATEON DATE NULL,
+    CREATEUSERID varchar2(50) NULL,
+    CREATEBY varchar2(50) NULL,
+    MODIFIEDON DATE NULL,
+    MODIFIEDUSERID varchar2(50) NULL,
+    MODIFIEDBY varchar2(50) NULL,
+    PRIMARY KEY (ID) 
+);
+
+-- 系统配置表
+CREATE TABLE BASEPARAMETER
+(
+  ID                VARCHAR2(50) not null,
+  CATEGORYCODE      VARCHAR2(50),
+  PARAMETERID       VARCHAR2(50),
+  PARAMETERCODE     VARCHAR2(50),
+  PARAMETERCONTENT  VARCHAR2(800),
+  WORKED            NUMBER(1) default 0 not null,
+  ENABLED           NUMBER(1) default 1 not null,
+  DELETIONSTATECODE NUMBER(1) default 0,
+  SORTCODE          NUMBER(10),
+  DESCRIPTION       VARCHAR2(200),
+  CREATEUSERID      VARCHAR2(50),
+  CREATEBY          VARCHAR2(50),
+  CREATEON          DATE,
+  MODIFIEDON        DATE,
+  MODIFIEDUSERID    VARCHAR2(50),
+  MODIFIEDBY        VARCHAR2(50)
+);

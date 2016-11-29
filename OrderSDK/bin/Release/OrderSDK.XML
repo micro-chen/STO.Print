@@ -1,0 +1,835 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrderSDK</name>
+    </assembly>
+    <members>
+        <member name="T:OrderSDK.ConfigSetting.ApiConfigSettings">
+            <summary>
+            API配置读取
+            </summary>
+        </member>
+        <member name="P:OrderSDK.ConfigSetting.ApiConfigSettings.Settings">
+            <summary>
+            根据名称获取配置节
+            </summary>
+        </member>
+        <member name="T:OrderSDK.HttpHelper">
+            <summary>
+            Http连接操作帮助类
+            类说明：HttpHelper类，用来实现Http访问，Post或者Get方式的，直接访问，带Cookie的，带证书的等方式，可以设置代理
+            重要提示：请不要自行修改本类，如果因为你自己修改后将无法升级到新版本。如果确实有什么问题请到官方网站提建议，
+            我们一定会及时修改
+            </summary>
+        </member>
+        <member name="M:OrderSDK.HttpHelper.GetHtml(OrderSDK.HttpItem)">
+            <summary>
+            根据相传入的数据，得到相应页面数据
+            </summary>
+            <param name="item">参数类对象</param>
+            <returns>返回HttpResult类型</returns>
+        </member>
+        <member name="M:OrderSDK.HttpHelper.GetMemoryStream(System.IO.Stream)">
+            <summary>
+            4.0以下.net版本取数据使用
+            </summary>
+            <param name="streamResponse">流</param>
+        </member>
+        <member name="M:OrderSDK.HttpHelper.SetRequest(OrderSDK.HttpItem)">
+             <summary>
+             为请求准备参数
+             </summary>
+            <param name="item">参数列表</param>
+        </member>
+        <member name="M:OrderSDK.HttpHelper.SetCer(OrderSDK.HttpItem)">
+            <summary>
+            设置证书
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:OrderSDK.HttpHelper.SetCerList(OrderSDK.HttpItem)">
+            <summary>
+            设置多个证书
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:OrderSDK.HttpHelper.SetCookie(OrderSDK.HttpItem)">
+            <summary>
+            设置Cookie
+            </summary>
+            <param name="item">Http参数</param>
+        </member>
+        <member name="M:OrderSDK.HttpHelper.SetPostData(OrderSDK.HttpItem)">
+            <summary>
+            设置Post数据
+            </summary>
+            <param name="item">Http参数</param>
+        </member>
+        <member name="M:OrderSDK.HttpHelper.SetProxy(OrderSDK.HttpItem)">
+            <summary>
+            设置代理
+            </summary>
+            <param name="item">参数对象</param>
+        </member>
+        <member name="M:OrderSDK.HttpHelper.CheckValidationResult(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            回调验证证书问题
+            </summary>
+            <param name="sender">流对象</param>
+            <param name="certificate">证书</param>
+            <param name="chain">X509Chain</param>
+            <param name="errors">SslPolicyErrors</param>
+            <returns>bool</returns>
+        </member>
+        <member name="T:OrderSDK.HttpItem">
+            <summary>
+            Http请求参考类
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.URL">
+            <summary>
+            请求URL必须填写
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.Method">
+            <summary>
+            请求方式默认为GET方式,当为POST方式时必须设置Postdata的值
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.Timeout">
+            <summary>
+            默认请求超时时间
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.ReadWriteTimeout">
+            <summary>
+            默认写入Post数据超时间
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.KeepAlive">
+            <summary>
+             获取或设置一个值，该值指示是否与 Internet 资源建立持久性连接默认为true。
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.Accept">
+            <summary>
+            请求标头值 默认为text/html, application/xhtml+xml, */*
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.ContentType">
+            <summary>
+            请求返回类型默认 text/html
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.UserAgent">
+            <summary>
+            客户端访问信息默认Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.Encoding">
+            <summary>
+            返回数据编码默认为NUll,可以自动识别,一般为utf-8,gbk,gb2312
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.PostDataType">
+            <summary>
+            Post的数据类型
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.Postdata">
+            <summary>
+            Post请求时要发送的字符串Post数据
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.PostdataByte">
+            <summary>
+            Post请求时要发送的Byte类型的Post数据
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.WebProxy">
+            <summary>
+            设置代理对象，不想使用IE默认配置就设置为Null，而且不要设置ProxyIp
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.CookieCollection">
+            <summary>
+            Cookie对象集合
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.Cookie">
+            <summary>
+            请求时的Cookie
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.Referer">
+            <summary>
+            来源地址，上次访问地址
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.CerPath">
+            <summary>
+            证书绝对路径
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.IsToLower">
+            <summary>
+            是否设置为全文小写，默认为不转化
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.Allowautoredirect">
+            <summary>
+            支持跳转页面，查询结果将是跳转后的页面，默认是不跳转
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.Connectionlimit">
+            <summary>
+            最大连接数
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.ProxyUserName">
+            <summary>
+            代理Proxy 服务器用户名
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.ProxyPwd">
+            <summary>
+            代理 服务器密码
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.ProxyIp">
+            <summary>
+            代理 服务IP ,如果要使用IE代理就设置为ieproxy
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.ResultType">
+            <summary>
+            设置返回类型String和Byte
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.Header">
+            <summary>
+            header对象
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:OrderSDK.HttpItem.ProtocolVersion" -->
+        <member name="P:OrderSDK.HttpItem.Expect100Continue">
+            <summary>
+             获取或设置一个 System.Boolean 值，该值确定是否使用 100-Continue 行为。如果 POST 请求需要 100-Continue 响应，则为 true；否则为 false。默认值为 true。
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.ClentCertificates">
+            <summary>
+            设置509证书集合
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.PostEncoding">
+            <summary>
+            设置或获取Post参数编码,默认的为Default编码
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.ResultCookieType">
+            <summary>
+            Cookie返回类型,默认的是只返回字符串类型
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpItem.ICredentials">
+            <summary>
+            获取或设置请求的身份验证信息。
+            </summary>
+        </member>
+        <member name="T:OrderSDK.HttpResult">
+            <summary>
+            Http返回参数类
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpResult.Cookie">
+            <summary>
+            Http请求返回的Cookie
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpResult.CookieCollection">
+            <summary>
+            Cookie对象集合
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpResult.Html">
+            <summary>
+            返回的String类型数据 只有ResultType.String时才返回数据，其它情况为空
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpResult.ResultByte">
+            <summary>
+            返回的Byte数组 只有ResultType.Byte时才返回数据，其它情况为空
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpResult.Header">
+            <summary>
+            header对象
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpResult.StatusDescription">
+            <summary>
+            返回状态说明
+            </summary>
+        </member>
+        <member name="P:OrderSDK.HttpResult.StatusCode">
+            <summary>
+            返回状态码,默认为OK
+            </summary>
+        </member>
+        <member name="T:OrderSDK.ResultType">
+            <summary>
+            返回类型
+            </summary>
+        </member>
+        <member name="F:OrderSDK.ResultType.String">
+            <summary>
+            表示只返回字符串 只有Html有数据
+            </summary>
+        </member>
+        <member name="F:OrderSDK.ResultType.Byte">
+            <summary>
+            表示返回字符串和字节流 ResultByte和Html都有数据返回
+            </summary>
+        </member>
+        <member name="T:OrderSDK.PostDataType">
+            <summary>
+            Post的数据格式默认为string
+            </summary>
+        </member>
+        <member name="F:OrderSDK.PostDataType.String">
+            <summary>
+            字符串类型，这时编码Encoding可不设置
+            </summary>
+        </member>
+        <member name="F:OrderSDK.PostDataType.Byte">
+            <summary>
+            Byte类型，需要设置PostdataByte参数的值编码Encoding可设置为空
+            </summary>
+        </member>
+        <member name="F:OrderSDK.PostDataType.FilePath">
+            <summary>
+            传文件，Postdata必须设置为文件的绝对路径，必须设置Encoding的值
+            </summary>
+        </member>
+        <member name="T:OrderSDK.ResultCookieType">
+            <summary>
+            Cookie返回类型
+            </summary>
+        </member>
+        <member name="F:OrderSDK.ResultCookieType.String">
+            <summary>
+            只返回字符串类型的Cookie
+            </summary>
+        </member>
+        <member name="F:OrderSDK.ResultCookieType.CookieCollection">
+            <summary>
+            CookieCollection格式的Cookie集合同时也返回String类型的cookie
+            </summary>
+        </member>
+        <member name="T:OrderSDK.HttpUtility.RequestUtility">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:OrderSDK.HttpUtility.RequestUtility.HttpGet(System.String,System.Text.Encoding)">
+            <summary>
+            使用Get方法获取字符串结果（没有加入Cookie）
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"> </param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.HttpUtility.RequestUtility.HttpGet(System.String,System.Net.CookieContainer,System.Text.Encoding)">
+            <summary>
+            使用Get方法获取字符串结果（加入Cookie）
+            </summary>
+            <param name="url"></param>
+            <param name="cookieContainer"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.HttpUtility.RequestUtility.HttpPost(System.String,System.Net.CookieContainer,System.Collections.Generic.Dictionary{System.String,System.String},System.Text.Encoding)">
+            <summary>
+            使用Post方法获取字符串结果，常规提交
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.HttpUtility.RequestUtility.HttpPost(System.String,System.Net.CookieContainer,System.IO.Stream,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Text.Encoding)">
+            <summary>
+            使用Post方法获取字符串结果
+            </summary>
+            <param name="url"></param>
+            <param name="cookieContainer"></param>
+            <param name="postStream"></param>
+            <param name="fileDictionary">需要上传的文件，Key：对应要上传的Name，Value：本地文件名</param>
+            <param name="refererUrl"> </param>
+            <param name="encoding"> </param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:OrderSDK.HttpUtility.RequestUtility.GetQueryString(System.Collections.Generic.Dictionary{System.String,System.String})" -->
+        <member name="T:OrderSDK.ISendSdk">
+            <summary>
+            中通快递标准接口调用SDK
+            </summary>
+        </member>
+        <member name="M:OrderSDK.ISendSdk.Send(System.String,System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            调用接口
+            </summary>
+            <param name="data">传输的业务数据字符串（常见JSON）</param>
+            <param name="url">接口调用URL</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <returns>调用结果</returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdk.Send(System.String,System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            调用接口
+            </summary>
+            <param name="data">传输的业务数据字符串（常见JSON）</param>
+            <param name="url">接口调用URL</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <param name="extKv">扩展字段</param>
+            <returns>调用结果</returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdk.Send``1(System.String,System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Func{System.String,``0})">
+            <summary>
+            接口调用
+            </summary>
+            <typeparam name="T">业务数据对象</typeparam>
+            <param name="data">传输的业务数据字符串（常见JSON）</param>
+            <param name="url">接口调用URL</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <param name="converter">序列化方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdk.Send``1(System.String,System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Func{System.String,``0})">
+            <summary>
+            接口调用
+            </summary>
+            <typeparam name="T">业务数据对象</typeparam>
+            <param name="data">传输的业务数据对象</param>
+            <param name="url">接口调用URL</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <param name="extKv">扩展字段</param>
+            <param name="converter">序列化方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdk.Send``2(``1,System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Func{System.String,``0},System.Func{``1,System.String})">
+            <summary>
+            接口调用
+            </summary>
+            <typeparam name="TOut">输出结果对象</typeparam>
+            <typeparam name="TIn">输入对象</typeparam>
+            <param name="data">传输的业务数据字符串（常见JSON）</param>
+            <param name="url">接口调用URL</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <param name="converter">反序列化方法</param>
+            <param name="serSerialize">序列化方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdk.Send``2(``1,System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Func{System.String,``0},System.Func{``1,System.String})">
+            <summary>
+            接口调用
+            </summary>
+            <typeparam name="TOut">输出结果对象</typeparam>
+            <typeparam name="TIn">输入对象</typeparam>
+            <param name="data">传输的业务数据对象</param>
+            <param name="url">接口调用URL</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <param name="extKv">扩展字段</param>
+            <param name="converter">反序列化方法</param>
+            <param name="serSerialize">序列化方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdk.GetStream(System.String,System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            接口调用
+            </summary>
+            <param name="data">传输的业务数据字符串（常见JSON）</param>
+            <param name="url">接口调用URL</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <param name="extKv">扩展字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdk.GetStream``1(``0,System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Func{``0,System.String},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            接口调用
+            </summary>
+            <typeparam name="T">业务数据对象</typeparam>
+            <param name="data">传输的业务数据</param>
+            <param name="url">接口调用URL</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <param name="serSerialize"></param>
+            <param name="extKv">扩展字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdk.GetRequestParam(System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            获取请求参数
+            </summary>
+            <param name="data">业务数据</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <param name="extKv">扩展字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdk.GetRequestParam``1(``0,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Func{``0,System.String},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            获取请求参数
+            </summary>
+            <typeparam name="T">业务数据对象</typeparam>
+            <param name="data">业务数据对象</param>
+            <param name="encoding"></param>
+            <param name="isBase64"></param>
+            <param name="sign"></param>
+            <param name="messageType"></param>
+            <param name="companyId"></param>
+            <param name="serSerialize"></param>
+            <param name="extKv"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OrderSDK.ISendSdkAsync">
+            <summary>
+            异步接口调用接口
+            </summary>
+        </member>
+        <member name="M:OrderSDK.ISendSdkAsync.SendAsync(System.String,System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            调用接口
+            </summary>
+            <param name="data">传输的业务数据字符串（常见JSON）</param>
+            <param name="url">接口调用URL</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <returns>调用结果</returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdkAsync.SendAsync(System.String,System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            调用接口
+            </summary>
+            <param name="data">传输的业务数据字符串（常见JSON）</param>
+            <param name="url">接口调用URL</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <param name="extKv">扩展字段</param>
+            <returns>调用结果</returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdkAsync.SendAsync(OrderSDK.ConfigSetting.ApiConfigElement,System.String,System.Text.Encoding,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            调用接口
+            </summary>
+            <param name="config">接配置</param>
+            <param name="data">数据</param>
+            <param name="encoding">编码方式</param>
+            <param name="messageType">消息类型</param>
+            <param name="extKv">扩展字段</param>
+            <returns>调用结果</returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdkAsync.SendAsync``1(System.String,System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Func{System.String,``0})">
+            <summary>
+            接口调用
+            </summary>
+            <typeparam name="T">业务数据对象</typeparam>
+            <param name="data">传输的业务数据字符串（常见JSON）</param>
+            <param name="url">接口调用URL</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <param name="converter">序列化方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdkAsync.SendAsync``1(System.String,System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Func{System.String,``0})">
+            <summary>
+            接口调用
+            </summary>
+            <typeparam name="T">业务数据对象</typeparam>
+            <param name="data">传输的业务数据对象</param>
+            <param name="url">接口调用URL</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <param name="extKv">扩展字段</param>
+            <param name="converter">序列化方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdkAsync.SendAsync``2(``1,System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Func{System.String,``0},System.Func{``1,System.String})">
+            <summary>
+            接口调用
+            </summary>
+            <typeparam name="TOut">输出结果对象</typeparam>
+            <typeparam name="TIn">输入对象</typeparam>
+            <param name="data">传输的业务数据字符串（常见JSON）</param>
+            <param name="url">接口调用URL</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <param name="converter">反序列化方法</param>
+            <param name="serSerialize">序列化方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdkAsync.SendAsync``2(``1,System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Func{System.String,``0},System.Func{``1,System.String})">
+            <summary>
+            接口调用
+            </summary>
+            <typeparam name="TOut">输出结果对象</typeparam>
+            <typeparam name="TIn">输入对象</typeparam>
+            <param name="data">传输的业务数据对象</param>
+            <param name="url">接口调用URL</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <param name="extKv">扩展字段</param>
+            <param name="converter">反序列化方法</param>
+            <param name="serSerialize">序列化方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdkAsync.GetStreamAsync(System.String,System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            接口调用
+            </summary>
+            <param name="data">传输的业务数据字符串（常见JSON）</param>
+            <param name="url">接口调用URL</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <param name="extKv">扩展字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdkAsync.GetStreamAsync``1(``0,System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Func{``0,System.String},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            接口调用
+            </summary>
+            <typeparam name="T">业务数据对象</typeparam>
+            <param name="data">传输的业务数据</param>
+            <param name="url">接口调用URL</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <param name="serSerialize"></param>
+            <param name="extKv">扩展字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdkAsync.GetRequestParam(System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            获取请求参数
+            </summary>
+            <param name="data">业务数据</param>
+            <param name="encoding">编码方式</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">密钥</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">公司标识</param>
+            <param name="extKv">扩展字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.ISendSdkAsync.GetRequestParam``1(``0,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Func{``0,System.String},System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            获取请求参数
+            </summary>
+            <typeparam name="T">业务数据对象</typeparam>
+            <param name="data">业务数据对象</param>
+            <param name="encoding"></param>
+            <param name="isBase64"></param>
+            <param name="sign"></param>
+            <param name="messageType"></param>
+            <param name="companyId"></param>
+            <param name="serSerialize"></param>
+            <param name="extKv"></param>
+            <returns></returns>
+        </member>
+        <member name="P:OrderSDK.Models.ApiResultBase.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:OrderSDK.Models.ApiResultBase.Reason">
+            <summary>
+            原因
+            </summary>
+        </member>
+        <member name="T:OrderSDK.Models.OrderCountBase">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:OrderSDK.Models.OrderCountBase.Site">
+            <summary>
+            站点名称或编号
+            </summary>
+        </member>
+        <member name="P:OrderSDK.Models.OrderCountBase.StartTime">
+            <summary>
+            起始时间
+            </summary>
+        </member>
+        <member name="P:OrderSDK.Models.OrderCountBase.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:OrderSDK.Models.OrderCountBase.Count">
+            <summary>
+            订单数量
+            </summary>
+        </member>
+        <member name="T:OrderSDK.OrderRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:OrderSDK.OrderRequest.Send(System.String,System.String,System.Text.Encoding,System.Boolean,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            发送请求
+            </summary>
+            <param name="data">序列化后的数据</param>
+            <param name="url">URL</param>
+            <param name="encoding">编码</param>
+            <param name="isBase64">是否Base64</param>
+            <param name="sign">签名</param>
+            <param name="messageType">消息类型</param>
+            <param name="companyId">合作ID</param>
+            <param name="extKv">扩展参数</param>
+            <returns>执行结果</returns>
+        </member>
+        <member name="T:OrderSDK.Config">
+            <summary>
+            设置类
+            </summary>
+        </member>
+        <member name="M:OrderSDK.Helper.Encrypt.GetMd5Hash(System.String)">
+            <summary>
+            得到MD5散列
+            </summary>
+            <param name="input">输入字符串</param>
+            <returns>MD5散列</returns>
+        </member>
+        <member name="M:OrderSDK.Helper.Encrypt.EncodeBase64(System.String,System.String)">
+            <summary>
+            生成base64
+            </summary>
+            <param name="encodeType">编码类型</param>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.Helper.Encrypt.EncodeBase64(System.Text.Encoding,System.String)">
+            <summary>
+            生成base64
+            </summary>
+            <param name="encodeType">编码类型</param>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.Helper.Encrypt.GetMd5HashBytes(System.String)">
+            <summary>
+            获取MD5字节数组UTF-8
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.Helper.Encrypt.GetMd5HashBytes(System.String,System.String)">
+            <summary>
+            自定义编码类型
+            </summary>
+            <param name="input"></param>
+            <param name="encodeType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OrderSDK.Helper.Encrypt.GetMd5HashBytes(System.String,System.Text.Encoding)">
+            <summary>
+            自定义编码类型
+            </summary>
+            <param name="input"></param>
+            <param name="encodeType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OrderSDK.SendRequestAsync">
+            <summary>
+                异步发送请求帮助类
+            </summary>
+        </member>
+        <member name="M:OrderSDK.SendRequestAsync.#ctor">
+            <summary>
+                使用默认构造函数，自动创建HttpClient
+            </summary>
+        </member>
+        <member name="M:OrderSDK.SendRequestAsync.#ctor(System.Net.Http.HttpClient)">
+            <summary>
+                自定义HttpClient
+            </summary>
+            <param name="client"></param>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.ExtensionAttribute">
+             <summary>
+             缺少编译器要求的成员“System.Runtime.CompilerServices.ExtensionAttribute..ctor” 解决方案
+             命名空间不可修改，类名称不可修改
+             错误操作：引用了Newtonsoft.Json.Net20.dll文件导致，需要加上这个类就可以解决问题
+             解决方案链接：http://www.cnblogs.com/zihuxinyu/archive/2013/05/06/3063181.html
+            
+             修改纪录
+            
+            		  2014-09-26 版本：1.0 YangHengLian 创建主键，注意命名空间的排序。
+             
+             版本：1.0
+            
+             <author>
+            		<name>YangHengLian</name>
+            		<date>2014-09-26</date>
+             </author>
+             </summary>
+        </member>
+    </members>
+</doc>

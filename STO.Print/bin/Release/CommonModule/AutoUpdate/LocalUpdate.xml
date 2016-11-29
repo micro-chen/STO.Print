@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Local>
+    <ServerDownUrl url="http://update.zto.cn:88/update/Print/" />
+    <ApplicationName name="STO.Print.exe" />
+    <Version>6.2015.08.25</Version>
+    <Files>
+        <file name="QF1.grf" version="6.2015.08.25" />
+        <file name="QF1.jpg" version="6.2015.08.25" />
+        <file name="QF2.grf" version="6.2015.08.25" />
+        <file name="QF2.jpg" version="6.2015.08.25" />
+        <file name="STO.grf" version="6.2015.08.25" />
+        <file name="STO.jpg" version="6.2015.08.25" />
+        <file name="YTO.grf" version="6.2015.08.25" />
+        <file name="YTO.jpg" version="6.2015.08.25" />
+        <file name="YUNDA.grf" version="6.2015.08.25" />
+        <file name="YUNDA.jpg" version="6.2015.08.25" />
+        <file name="ZJS.grf" version="6.2015.08.25" />
+        <file name="ZJS.jpg" version="6.2015.08.25" />
+        <file name="STO.Print.exe" version="6.2015.08.25" />
+        <file name="SFBill.grf" version="6.2015.08.23" />
+        <file name="SFBill.jpg" version="6.2015.08.23" />
+        <file name="DevExpress.Printing.v12.2.Core.dll" version="6.2015.09.01" />
+        <file name="DevExpress.BonusSkins.v12.2.dll" version="6.2015.09.14" />
+        <file name="DotNet.ScreenShot.dll" version="6.2015.09.14" />
+        <file name="ZtoInnerBill.grf" version="6.2015.10.24" />
+        <file name="DevExpress.XtraWizard.v12.2.dll" version="6.2015.10.24" />
+        <file name="ThoughtWorks.QRCode.dll" version="6.2015.10.24" />
+        <file name="BarcodeLib.dll" version="6.2015.08.25" />
+        <file name="DevExpress.RichEdit.v12.2.Core.dll" version="6.2015.08.25" />
+        <file name="DevExpress.XtraRichEdit.v12.2.dll" version="6.2015.08.25" />
+        <file name="DevExpress.XtraRichEdit.v12.2.Extensions.dll" version="6.2015.08.25" />
+        <file name="ImportBill.xls" version="6.2015.08.25" />
+        <file name="Microsoft.AspNet.SignalR.Client.dll" version="6.2015.08.25" />
+        <file name="SF2015Bill.grf" version="6.2015.08.25" />
+        <file name="SF2015Bill.jpg" version="6.2015.08.25" />
+        <file name="STO.Backup.db" version="6.2015.08.25" />
+        <file name="Zto180CODElecBill.grf" version="6.2015.08.25" />
+        <file name="Zto180CODElecBill.jpg" version="6.2015.08.25" />
+        <file name="Zto180ElecBill.grf" version="6.2015.08.25" />
+        <file name="Zto180ElecBill.jpg" version="6.2015.08.25" />
+        <file name="Zto180ToPayMentElecBill.grf" version="6.2015.08.25" />
+        <file name="Zto180ToPayMentElecBill.jpg" version="6.2015.08.25" />
+        <file name="Zto190ElecBill.grf" version="6.2015.08.25" />
+        <file name="Zto190ElecBill.jpg" version="6.2015.08.25" />
+        <file name="ZTOCODBill.grf" version="6.2015.08.25" />
+        <file name="ZTOToPayMentBill.grf" version="6.2015.08.25" />
+    </Files>
+</Local>

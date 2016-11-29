@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Targets>
+  <Target Name="E:\申通打印专家\STO.Print\DotNet.Utilities\bin\Release\DotNet.Utilities.dll">
+   <Modules>
+    <Module Name="dotnet.utilities.dll">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2016-11-28 08:59:39Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">用强名称密钥对 'DotNet.Utilities.dll' 进行签名。</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="DotNet.Utilities">
+       <Types>
+        <Type Name="BaseDbHelper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ExecuteNonQuery(System.Data.IDbTransaction,System.String,System.Data.IDbDataParameter[],System.Data.CommandType)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-11-28 08:59:39Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="E:\申通打印专家\STO.Print\DotNet.Utilities\DbUtilities" File="BaseDbHelper.Method.cs" Line="189">传递给 'BaseDbHelper.ExecuteNonQuery(IDbTransaction, string, IDbDataParameter[], CommandType)' 中的 'DbCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'commandText'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteReader(System.String,System.Data.IDbDataParameter[],System.Data.CommandType)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-11-28 08:59:39Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="E:\申通打印专家\STO.Print\DotNet.Utilities\DbUtilities" File="BaseDbHelper.Method.cs" Line="74">传递给 'BaseDbHelper.ExecuteReader(string, IDbDataParameter[], CommandType)' 中的 'DbCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'commandText'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ExecuteScalar(System.String,System.Data.IDbDataParameter[],System.Data.CommandType)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-11-28 08:59:39Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="E:\申通打印专家\STO.Print\DotNet.Utilities\DbUtilities" File="BaseDbHelper.Method.cs" Line="293">传递给 'BaseDbHelper.ExecuteScalar(string, IDbDataParameter[], CommandType)' 中的 'DbCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'commandText'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Fill(System.Data.DataSet,System.String,System.String,System.Data.IDbDataParameter[],System.Data.CommandType)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-11-28 08:59:39Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="E:\申通打印专家\STO.Print\DotNet.Utilities\DbUtilities" File="BaseDbHelper.Method.cs" Line="535">传递给 'BaseDbHelper.Fill(DataSet, string, string, IDbDataParameter[], CommandType)' 中的 'DbCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'commandText'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Fill(System.Data.DataTable,System.String,System.Data.IDbDataParameter[],System.Data.CommandType)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-11-28 08:59:39Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="E:\申通打印专家\STO.Print\DotNet.Utilities\DbUtilities" File="BaseDbHelper.Method.cs" Line="429">传递给 'BaseDbHelper.Fill(DataTable, string, IDbDataParameter[], CommandType)' 中的 'DbCommand.CommandText.set(string)' 的查询字符串可能包含以下变量 'commandText'。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>程序集应具有有效的强名称</Name>
+   <Description>程序集没有强名称，强名称无效，或者强名称只有经过计算机配置后才有效。不应部署处于这种状态的程序集。出现这种情况最常见原因有: 1) 对程序集进行签名后，修改了该程序集的内容；2) 签名过程失败；3) 延迟了程序集签名；4) 存在一个允许检查通过(原本不应通过)的注册表项。</Description>
+   <Resolution Name="NoStrongName">用强名称密钥对 {0} 进行签名。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="检查 SQL 查询是否存在安全漏洞" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>检查 SQL 查询是否存在安全漏洞</Name>
+   <Description>通过用户输入生成的 SQL 命令字符串容易受到 SQL 注入式攻击。Microsoft SQL Server 和其他数据库服务器支持存储过程和参数化 SQL 查询，这将降低受到注入式攻击的风险。</Description>
+   <Resolution Name="WithNonLiterals">传递给 {1} 中的 {0} 的查询字符串可能包含以下变量 {2}。如果其中的任意变量可能来自用户输入，请考虑使用存储过程或参数化 SQL 查询，而不是通过字符串串联来生成查询。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">类别</String>
+  <String Key="Certainty">确定性</String>
+  <String Key="CollapseAll">全部折叠</String>
+  <String Key="CheckId">检查 ID</String>
+  <String Key="Error">错误</String>
+  <String Key="Errors">错误</String>
+  <String Key="ExpandAll">全部展开</String>
+  <String Key="Help">帮助</String>
+  <String Key="Line">行</String>
+  <String Key="Messages">消息</String>
+  <String Key="LocationNotStoredInPdb">[位置未存储在 Pdb 中]</String>
+  <String Key="Project">项目</String>
+  <String Key="Resolution">解析</String>
+  <String Key="Rule">规则</String>
+  <String Key="RuleFile">规则文件</String>
+  <String Key="RuleDescription">规则说明</String>
+  <String Key="Source">源</String>
+  <String Key="Status">状态</String>
+  <String Key="Target">目标</String>
+  <String Key="Warning">警告</String>
+  <String Key="Warnings">警告</String>
+  <String Key="ReportTitle">代码分析报告</String>
+ </Localized>
+</FxCopReport>

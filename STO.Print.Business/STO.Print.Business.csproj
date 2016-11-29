@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5D1B2D55-F8F9-4CFE-8C3C-1B8CDC5FDF28}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>STO.Print.Business</RootNamespace>
+    <AssemblyName>STO.Print.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Manager\BaseExpressManager.Auto.cs" />
+    <Compile Include="Manager\BaseTemplateManager.Auto.cs" />
+    <Compile Include="Manager\ZtoPrintBillManager.Auto.cs" />
+    <Compile Include="Manager\ZtoPrintBillManager.Extend.cs" />
+    <Compile Include="Manager\ZtoPrintCancelManager.Auto.cs" />
+    <Compile Include="Manager\ZtoPrintHistoryManager.Auto.cs" />
+    <Compile Include="Manager\ZtoUserManager.Auto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DotNet.Business\DotNet.Business.csproj">
+      <Project>{690ef14b-320e-439a-b0a5-3d956084dc6a}</Project>
+      <Name>DotNet.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DotNet.Model\DotNet.Model.csproj">
+      <Project>{f3734d22-79c5-4be2-888d-139a49c08ac4}</Project>
+      <Name>DotNet.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DotNet.Utilities\DotNet.Utilities.csproj">
+      <Project>{2fb4c4a9-f14c-4cdd-9d0e-7c4e7cebebdd}</Project>
+      <Name>DotNet.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\STO.Print.Model\STO.Print.Model.csproj">
+      <Project>{4982f2b2-2f5c-4368-a9ab-a428ab950233}</Project>
+      <Name>STO.Print.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

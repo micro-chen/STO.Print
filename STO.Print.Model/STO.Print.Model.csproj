@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4982F2B2-2F5C-4368-A9AB-A428AB950233}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>STO.Print.Model</RootNamespace>
+    <AssemblyName>STO.Print.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\DotNet.Business\bin\Release\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\BaiduAddressEntity.AddressComponent2.cs" />
+    <Compile Include="Model\BaiduAddressEntity.cs" />
+    <Compile Include="Model\BaiduAddressEntity.Location2.cs" />
+    <Compile Include="Model\BaiduAddressEntity.PoiRegion.cs" />
+    <Compile Include="Model\BaiduAddressEntity.Result2.cs" />
+    <Compile Include="Model\BaiduBackEntity.cs" />
+    <Compile Include="Model\BaiduLocation.cs" />
+    <Compile Include="Model\BaiduLocationJsonTypes\Location.cs" />
+    <Compile Include="Model\BaiduLocationJsonTypes\Result.cs" />
+    <Compile Include="Model\BaiduWeatherEntity.cs" />
+    <Compile Include="Model\BaiduWeatherEntity.Index2.cs" />
+    <Compile Include="Model\BaiduWeatherEntity.Result.cs" />
+    <Compile Include="Model\BaiduWeatherEntity.WeatherData.cs" />
+    <Compile Include="Model\BaseExpressEntity.cs" />
+    <Compile Include="Model\BaseTemplateEntity.cs" />
+    <Compile Include="Model\KuaiDi100.Auto2.cs" />
+    <Compile Include="Model\KuaiDi100.cs" />
+    <Compile Include="Model\LoadPrintMarkEntity.cs" />
+    <Compile Include="Model\Result.cs" />
+    <Compile Include="Model\TaoBaoIpEntity.cs" />
+    <Compile Include="Model\TaoBaoIpEntity.Data2.cs" />
+    <Compile Include="Model\ThreadReturnData.cs" />
+    <Compile Include="Model\ZtoCustomerErrorEntity.cs" />
+    <Compile Include="Model\ZTOElecBillCountJsonEntity.cs" />
+    <Compile Include="Model\ZtoElecUserInfoEntity.cs" />
+    <Compile Include="Model\ZtoOrderBatchEntity.cs" />
+    <Compile Include="Model\ZtoOrderBatchEntityJsonTypes\Receiver.cs" />
+    <Compile Include="Model\ZtoOrderBatchEntityJsonTypes\Sender.cs" />
+    <Compile Include="Model\ZtoOrderBatchResponseEntity.cs" />
+    <Compile Include="Model\ZtoOrderBatchResponseEntityJsonTypes\Keys.cs" />
+    <Compile Include="Model\ZtoPrintBillEntity.cs" />
+    <Compile Include="Model\ZtoPrintCancelEntity.cs" />
+    <Compile Include="Model\ZtoPrintHistoryEntity.cs" />
+    <Compile Include="Model\ZtoPrintMarkResult.cs" />
+    <Compile Include="Model\ZtoSearchBillResponseEntity.cs" />
+    <Compile Include="Model\ZtoSearchBillResponseEntity.Trace.cs" />
+    <Compile Include="Model\ZtoUserEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DotNet.Model\DotNet.Model.csproj">
+      <Project>{f3734d22-79c5-4be2-888d-139a49c08ac4}</Project>
+      <Name>DotNet.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DotNet.Utilities\DotNet.Utilities.csproj">
+      <Project>{2fb4c4a9-f14c-4cdd-9d0e-7c4e7cebebdd}</Project>
+      <Name>DotNet.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

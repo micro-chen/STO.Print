@@ -1,0 +1,1300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C89EA268-69F6-4448-91D9-D24574C7E09A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>STO.Print</RootNamespace>
+    <AssemblyName>STO.Print</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>STO.Print.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.grdesLib, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\AxInterop.grdesLib.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.grnpweb5Lib, Version=5.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\AxInterop.grnpweb5Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.grproLib, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\AxInterop.grproLib.dll</HintPath>
+    </Reference>
+    <Reference Include="BarcodeLib, Version=1.0.0.12, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\DevExpress.BonusSkins.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\DevExpress.Charts.v16.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\DevExpress.Data.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\DevExpress.Office.v16.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\DevExpress.Printing.v16.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\DevExpress.RichEdit.v16.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\DevExpress.XtraBars.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\DevExpress.XtraCharts.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.1.UI, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\DevExpress.XtraCharts.v16.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\DevExpress.XtraGrid.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\DevExpress.XtraPrinting.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\DevExpress.XtraRichEdit.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v16.1.Extensions, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\DevExpress.XtraRichEdit.v16.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\DevExpress.XtraTreeList.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\DevExpress.XtraWizard.v16.1.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.grdesLib, Version=5.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>External\Interop.grdesLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.grnpweb5Lib, Version=5.8.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>External\Interop.grnpweb5Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.grproLib, Version=5.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>External\Interop.grproLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Client, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DotNet.Business\bin\Release\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\360Downloads\Software\NPOI 2.2.0.0\dotnet4\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\360Downloads\Software\NPOI 2.2.0.0\dotnet4\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.0.5.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\360Downloads\Software\NPOI 2.2.0.0\dotnet4\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.5775.39514, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>External\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonModule\AddBillForm\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddZto180ElecBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddZto180ElecBill.Designer.cs">
+      <DependentUpon>FrmAddZto180ElecBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddZtoCODBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddZtoCODBill.designer.cs">
+      <DependentUpon>FrmAddZtoCODBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddZtoTaoBaoBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddZtoTaoBaoBill.designer.cs">
+      <DependentUpon>FrmAddZtoTaoBaoBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddZtoToPayMentBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddZtoToPayMentBill.designer.cs">
+      <DependentUpon>FrmAddZtoToPayMentBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddZtoBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddZtoBill.designer.cs">
+      <DependentUpon>FrmAddZtoBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddYtoBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddYtoBill.designer.cs">
+      <DependentUpon>FrmAddYtoBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddShunFeng2012Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddShunFeng2012Bill.designer.cs">
+      <DependentUpon>FrmAddShunFeng2012Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddZto180CODElecBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddZto180CODElecBill.Designer.cs">
+      <DependentUpon>FrmAddZto180CODElecBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddZto180ToPayMentElecBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddZto180ToPayMentElecBill.Designer.cs">
+      <DependentUpon>FrmAddZto180ToPayMentElecBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddShunFeng2015Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddShunFeng2015Bill.designer.cs">
+      <DependentUpon>FrmAddShunFeng2015Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddTianTianBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddTianTianBill.designer.cs">
+      <DependentUpon>FrmAddTianTianBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Logon\FrmLogOnByMobile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Logon\FrmLogOnByMobile.designer.cs">
+      <DependentUpon>FrmLogOnByMobile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\MyLock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\MyLock.designer.cs">
+      <DependentUpon>MyLock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionAttribute.cs" />
+    <Compile Include="CommonModule\SendMan\FrmChangeSendMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\SendMan\FrmChangeSendMan.Designer.cs">
+      <DependentUpon>FrmChangeSendMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmInputStartBillAndEndBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmInputStartBillAndEndBill.Designer.cs">
+      <DependentUpon>FrmInputStartBillAndEndBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmAddPrintBySelectedRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmAddPrintBySelectedRow.Designer.cs">
+      <DependentUpon>FrmAddPrintBySelectedRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmAlert.designer.cs">
+      <DependentUpon>FrmAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmBackElecBillByOrderNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmBackElecBillByOrderNumber.Designer.cs">
+      <DependentUpon>FrmBackElecBillByOrderNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmBaiduLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmBaiduLocation.Designer.cs">
+      <DependentUpon>FrmBaiduLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmBindZtoElecUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmBindZtoElecUserInfo.Designer.cs">
+      <DependentUpon>FrmBindZtoElecUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmBuildBarCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmBuildBarCode.designer.cs">
+      <DependentUpon>FrmBuildBarCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmBuildOrderNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmBuildOrderNumber.Designer.cs">
+      <DependentUpon>FrmBuildOrderNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmComputerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmComputerInfo.Designer.cs">
+      <DependentUpon>FrmComputerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Import\FrmImportExcelByJingDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Import\FrmImportExcelByJingDong.designer.cs">
+      <DependentUpon>FrmImportExcelByJingDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Import\FrmImportExcelByTaoBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Import\FrmImportExcelByTaoBao.designer.cs">
+      <DependentUpon>FrmImportExcelByTaoBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmIP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmIP.designer.cs">
+      <DependentUpon>FrmIP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmPrintBillChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmPrintBillChart.designer.cs">
+      <DependentUpon>FrmPrintBillChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmException.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmException.designer.cs">
+      <DependentUpon>FrmException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmExportBillImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmExportBillImage.Designer.cs">
+      <DependentUpon>FrmExportBillImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmMobileInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmMobileInfo.designer.cs">
+      <DependentUpon>FrmMobileInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmPrintData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmPrintData.Designer.cs">
+      <DependentUpon>FrmPrintData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmPrintHistoryRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmPrintHistoryRecord.Designer.cs">
+      <DependentUpon>FrmPrintHistoryRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmQRCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmQRCode.Designer.cs">
+      <DependentUpon>FrmQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\ReceiveMan\FrmReceiveManData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\ReceiveMan\FrmReceiveManData.Designer.cs">
+      <DependentUpon>FrmReceiveManData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\SendMan\FrmSendManData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\SendMan\FrmSendManData.Designer.cs">
+      <DependentUpon>FrmSendManData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmSnapScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmSnapScreen.designer.cs">
+      <DependentUpon>FrmSnapScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmSystemSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmSystemSetting.designer.cs">
+      <DependentUpon>FrmSystemSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrintText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrintText.Designer.cs">
+      <DependentUpon>FrmPrintText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWizard.Designer.cs">
+      <DependentUpon>FrmWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmZtoSearchPrintMark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmZtoSearchPrintMark.Designer.cs">
+      <DependentUpon>FrmZtoSearchPrintMark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\ReceiveMan\FrmChooseReceiveMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\ReceiveMan\FrmChooseReceiveMan.Designer.cs">
+      <DependentUpon>FrmChooseReceiveMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Import\FrmImportFreeExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Import\FrmImportFreeExcel.Designer.cs">
+      <DependentUpon>FrmImportFreeExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmProcessBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmProcessBar.designer.cs">
+      <DependentUpon>FrmProcessBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmAboutThis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmAboutThis.designer.cs">
+      <DependentUpon>FrmAboutThis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddZtoMainBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddZtoMainBill.designer.cs">
+      <DependentUpon>FrmAddZtoMainBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\SendMan\FrmAddSendMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\SendMan\FrmAddSendMan.designer.cs">
+      <DependentUpon>FrmAddSendMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmFeedBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmFeedBack.designer.cs">
+      <DependentUpon>FrmFeedBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Import\FrmImportError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Import\FrmImportError.designer.cs">
+      <DependentUpon>FrmImportError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Import\FrmImportExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Import\FrmImportExcel.designer.cs">
+      <DependentUpon>FrmImportExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Template\FrmDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Template\FrmDesigner.Designer.cs">
+      <DependentUpon>FrmDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmPrinterSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmPrinterSetting.Designer.cs">
+      <DependentUpon>FrmPrinterSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmRecognitionAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmRecognitionAddress.Designer.cs">
+      <DependentUpon>FrmRecognitionAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Import\FrmSelectFieldForImportFreeExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Import\FrmSelectFieldForImportFreeExcel.Designer.cs">
+      <DependentUpon>FrmSelectFieldForImportFreeExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Template\FrmTemplateSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Template\FrmTemplateSetting.Designer.cs">
+      <DependentUpon>FrmTemplateSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWait.designer.cs">
+      <DependentUpon>FrmWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWaiting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWaiting.Designer.cs">
+      <DependentUpon>FrmWaiting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmSearchBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmSearchBill.Designer.cs">
+      <DependentUpon>FrmSearchBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmBaiduWeather.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmBaiduWeather.designer.cs">
+      <DependentUpon>FrmBaiduWeather.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Browser\BrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Browser\BrowserForm.Designer.cs">
+      <DependentUpon>BrowserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CommonModule\Synchronous\FrmSynchronous.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Synchronous\FrmSynchronous.Designer.cs">
+      <DependentUpon>FrmSynchronous.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Synchronous\Synchronous.BeforeLogOn.cs" />
+    <Compile Include="CommonModule\Synchronous\Synchronous.cs" />
+    <Compile Include="CommonModule\Synchronous\Synchronous.Table.cs" />
+    <Compile Include="CommonModule\Synchronous\Synchronous.Upgrade.cs" />
+    <Compile Include="CommonModule\UserControl\ChooseSendMan.cs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\ChooseSendMan.cs.Designer.cs">
+      <DependentUpon>ChooseSendMan.cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\CircularProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\CircularProgressBarEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\MyAutoDocker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\MyAutoDocker.Designer.cs">
+      <DependentUpon>MyAutoDocker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\MyEnterBillControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\MyEnterBillControl.designer.cs">
+      <DependentUpon>MyEnterBillControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\MyQQGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\MyQQGroup.Designer.cs">
+      <DependentUpon>MyQQGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\MyRichEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\MyRichEdit.Designer.cs">
+      <DependentUpon>MyRichEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\SendManControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\SendManControl.Designer.cs">
+      <DependentUpon>SendManControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\ReceiveManControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\ReceiveManControl.Designer.cs">
+      <DependentUpon>ReceiveManControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\BindZtoElecUserInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\BindZtoElecUserInfo.designer.cs">
+      <DependentUpon>BindZtoElecUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\ChooseReceiveMan.cs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\ChooseReceiveMan.cs.Designer.cs">
+      <DependentUpon>ChooseReceiveMan.cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\MyInputStartBillAndEndBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonModule\UserControl\MyInputStartBillAndEndBill.Designer.cs">
+      <DependentUpon>MyInputStartBillAndEndBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\BaiduMapHelper.cs" />
+    <Compile Include="Utilities\BillPrintHelper.cs" />
+    <Compile Include="Utilities\BuilderTreeListLocalizer.cs" />
+    <Compile Include="Utilities\CacheManagerHelper.cs" />
+    <Compile Include="Utilities\ChildFormManagementHelper.cs" />
+    <Compile Include="Utilities\ComputerHelper.cs" />
+    <Compile Include="Utilities\CSVHelper.cs" />
+    <Compile Include="Utilities\DateHelper.cs" />
+    <Compile Include="Utilities\Des3EncryptionHelper.cs" />
+    <Compile Include="Utilities\ExcelHelper.cs" />
+    <Compile Include="Utilities\BuilderGridLocalizer.cs" />
+    <Compile Include="Utilities\ExportHelper.cs" />
+    <Compile Include="Utilities\FTPClientHelper.cs" />
+    <Compile Include="Utilities\GridLookUpEditHelper.cs" />
+    <Compile Include="Utilities\HardwareHandler.cs" />
+    <Compile Include="Utilities\HttpClientHelper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilities\HttpHelper.cs" />
+    <Compile Include="Utilities\JsonSplitHelper.cs" />
+    <Compile Include="Utilities\MailHelper.cs" />
+    <Compile Include="Utilities\MD5Helper.cs" />
+    <Compile Include="Utilities\MemoryCacheHelper.cs" />
+    <Compile Include="Utilities\MobileHelper.cs" />
+    <Compile Include="Utilities\NetworkHelper.cs" />
+    <Compile Include="Utilities\PrinterHelper.cs" />
+    <Compile Include="Utilities\ProcessHelper.cs" />
+    <Compile Include="Utilities\QQHelper.cs" />
+    <Compile Include="Utilities\ReadCsvHelper.cs" />
+    <Compile Include="Utilities\RichMailExporter.cs" />
+    <Compile Include="Utilities\ToolHelper.cs" />
+    <Compile Include="Utilities\TooltipHelper.cs" />
+    <Compile Include="Utilities\UpdateHelper.cs" />
+    <Compile Include="Utilities\WeatherHelper.cs" />
+    <Compile Include="CommonModule\Template\FrmOrderTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Template\FrmOrderTemplate.Designer.cs">
+      <DependentUpon>FrmOrderTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddStoBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\AddBillForm\FrmAddStoBill.designer.cs">
+      <DependentUpon>FrmAddStoBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\ZipHelper.cs" />
+    <Compile Include="CommonModule\Utilities\FrmBarCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Utilities\FrmBarCode.Designer.cs">
+      <DependentUpon>FrmBarCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\DateTimeHelper.cs" />
+    <Compile Include="Utilities\ZtoElecBillHelper.cs" />
+    <Compile Include="CommonModule\SendMan\FrmChooseSendMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\SendMan\FrmChooseSendMan.Designer.cs">
+      <DependentUpon>FrmChooseSendMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\SendMan\FrmImportExcelForSendMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\SendMan\FrmImportExcelForSendMan.Designer.cs">
+      <DependentUpon>FrmImportExcelForSendMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\SendMan\FrmSelectFieldForSendMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\SendMan\FrmSelectFieldForSendMan.Designer.cs">
+      <DependentUpon>FrmSelectFieldForSendMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Import\FrmImportExcelForReceiveMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Import\FrmImportExcelForReceiveMan.Designer.cs">
+      <DependentUpon>FrmImportExcelForReceiveMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\ReceiveMan\FrmSelectFieldForReceiveMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\ReceiveMan\FrmSelectFieldForReceiveMan.Designer.cs">
+      <DependentUpon>FrmSelectFieldForReceiveMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmPrintStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmPrintStatus.designer.cs">
+      <DependentUpon>FrmPrintStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\PrinterHelperExtend\Printer.cs" />
+    <Compile Include="Utilities\PrinterHelperExtend\PrinterJob.cs" />
+    <Compile Include="Utilities\PrinterHelperExtend\printLpt.cs" />
+    <Compile Include="Utilities\PrinterHelperExtend\RawPrinterHelper.cs" />
+    <Compile Include="CommonModule\Print\FrmRecycleRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmRecycleRecord.Designer.cs">
+      <DependentUpon>FrmRecycleRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmCancelRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonModule\Print\FrmCancelRecord.Designer.cs">
+      <DependentUpon>FrmCancelRecord.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CommonModule\AddBillForm\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\AddBillForm\FrmAddZto180ElecBill.resx">
+      <DependentUpon>FrmAddZto180ElecBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\AddBillForm\FrmAddZtoCODBill.resx">
+      <DependentUpon>FrmAddZtoCODBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\AddBillForm\FrmAddZtoTaoBaoBill.resx">
+      <DependentUpon>FrmAddZtoTaoBaoBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\AddBillForm\FrmAddZtoToPayMentBill.resx">
+      <DependentUpon>FrmAddZtoToPayMentBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\AddBillForm\FrmAddZtoBill.resx">
+      <DependentUpon>FrmAddZtoBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\AddBillForm\FrmAddYtoBill.resx">
+      <DependentUpon>FrmAddYtoBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\AddBillForm\FrmAddShunFeng2012Bill.resx">
+      <DependentUpon>FrmAddShunFeng2012Bill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\AddBillForm\FrmAddZto180CODElecBill.resx">
+      <DependentUpon>FrmAddZto180CODElecBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\AddBillForm\FrmAddZto180ToPayMentElecBill.resx">
+      <DependentUpon>FrmAddZto180ToPayMentElecBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\AddBillForm\FrmAddShunFeng2015Bill.resx">
+      <DependentUpon>FrmAddShunFeng2015Bill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\AddBillForm\FrmAddTianTianBill.resx">
+      <DependentUpon>FrmAddTianTianBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Logon\FrmLogOnByMobile.resx">
+      <DependentUpon>FrmLogOnByMobile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Print\FrmAddPrintBySelectedRow.resx">
+      <DependentUpon>FrmAddPrintBySelectedRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\UserControl\MyLock.resx">
+      <DependentUpon>MyLock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmAlert.resx">
+      <DependentUpon>FrmAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Print\FrmBackElecBillByOrderNumber.resx">
+      <DependentUpon>FrmBackElecBillByOrderNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmBaiduLocation.resx">
+      <DependentUpon>FrmBaiduLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Print\FrmBindZtoElecUserInfo.resx">
+      <DependentUpon>FrmBindZtoElecUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmBuildBarCode.resx">
+      <DependentUpon>FrmBuildBarCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Print\FrmBuildOrderNumber.resx">
+      <DependentUpon>FrmBuildOrderNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\SendMan\FrmChangeSendMan.resx">
+      <DependentUpon>FrmChangeSendMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmComputerInfo.resx">
+      <DependentUpon>FrmComputerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Import\FrmImportExcelByJingDong.resx">
+      <DependentUpon>FrmImportExcelByJingDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Import\FrmImportExcelByTaoBao.resx">
+      <DependentUpon>FrmImportExcelByTaoBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Print\FrmInputStartBillAndEndBill.resx">
+      <DependentUpon>FrmInputStartBillAndEndBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmIP.resx">
+      <DependentUpon>FrmIP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Print\FrmPrintBillChart.resx">
+      <DependentUpon>FrmPrintBillChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmException.resx">
+      <DependentUpon>FrmException.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Print\FrmExportBillImage.resx">
+      <DependentUpon>FrmExportBillImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmMobileInfo.resx">
+      <DependentUpon>FrmMobileInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Print\FrmPrintData.resx">
+      <DependentUpon>FrmPrintData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Print\FrmPrintHistoryRecord.resx">
+      <DependentUpon>FrmPrintHistoryRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmQRCode.resx">
+      <DependentUpon>FrmQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\ReceiveMan\FrmReceiveManData.resx">
+      <DependentUpon>FrmReceiveManData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\SendMan\FrmSendManData.resx">
+      <DependentUpon>FrmSendManData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmSnapScreen.resx">
+      <DependentUpon>FrmSnapScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmSystemSetting.resx">
+      <DependentUpon>FrmSystemSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrintText.resx">
+      <DependentUpon>FrmPrintText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWizard.resx">
+      <DependentUpon>FrmWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmZtoSearchPrintMark.resx">
+      <DependentUpon>FrmZtoSearchPrintMark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\ReceiveMan\FrmChooseReceiveMan.resx">
+      <DependentUpon>FrmChooseReceiveMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Import\FrmImportFreeExcel.resx">
+      <DependentUpon>FrmImportFreeExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmProcessBar.resx">
+      <DependentUpon>FrmProcessBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmAboutThis.resx">
+      <DependentUpon>FrmAboutThis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\AddBillForm\FrmAddZtoMainBill.resx">
+      <DependentUpon>FrmAddZtoMainBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\SendMan\FrmAddSendMan.resx">
+      <DependentUpon>FrmAddSendMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmFeedBack.resx">
+      <DependentUpon>FrmFeedBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Import\FrmImportError.resx">
+      <DependentUpon>FrmImportError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Import\FrmImportExcel.resx">
+      <DependentUpon>FrmImportExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Template\FrmDesigner.resx">
+      <DependentUpon>FrmDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Print\FrmPrinterSetting.resx">
+      <DependentUpon>FrmPrinterSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmRecognitionAddress.resx">
+      <DependentUpon>FrmRecognitionAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Import\FrmSelectFieldForImportFreeExcel.resx">
+      <DependentUpon>FrmSelectFieldForImportFreeExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Template\FrmTemplateSetting.resx">
+      <DependentUpon>FrmTemplateSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWait.resx">
+      <DependentUpon>FrmWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWaiting.resx">
+      <DependentUpon>FrmWaiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmSearchBill.resx">
+      <DependentUpon>FrmSearchBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmBaiduWeather.resx">
+      <DependentUpon>FrmBaiduWeather.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Browser\BrowserForm.resx">
+      <DependentUpon>BrowserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="CommonModule\Synchronous\FrmSynchronous.resx">
+      <DependentUpon>FrmSynchronous.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\UserControl\ChooseSendMan.cs.resx">
+      <DependentUpon>ChooseSendMan.cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\UserControl\MyEnterBillControl.resx">
+      <DependentUpon>MyEnterBillControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\UserControl\MyQQGroup.resx">
+      <DependentUpon>MyQQGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\UserControl\MyRichEdit.resx">
+      <DependentUpon>MyRichEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\UserControl\SendManControl.resx">
+      <DependentUpon>SendManControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Template\FrmOrderTemplate.resx">
+      <DependentUpon>FrmOrderTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\UserControl\ReceiveManControl.resx">
+      <DependentUpon>ReceiveManControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\AddBillForm\FrmAddStoBill.resx">
+      <DependentUpon>FrmAddStoBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Utilities\FrmBarCode.resx">
+      <DependentUpon>FrmBarCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\SendMan\FrmChooseSendMan.resx">
+      <DependentUpon>FrmChooseSendMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\SendMan\FrmImportExcelForSendMan.resx">
+      <DependentUpon>FrmImportExcelForSendMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\SendMan\FrmSelectFieldForSendMan.resx">
+      <DependentUpon>FrmSelectFieldForSendMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Import\FrmImportExcelForReceiveMan.resx">
+      <DependentUpon>FrmImportExcelForReceiveMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\ReceiveMan\FrmSelectFieldForReceiveMan.resx">
+      <DependentUpon>FrmSelectFieldForReceiveMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Print\FrmPrintStatus.resx">
+      <DependentUpon>FrmPrintStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\UserControl\BindZtoElecUserInfo.resx">
+      <DependentUpon>BindZtoElecUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Print\FrmRecycleRecord.resx">
+      <DependentUpon>FrmRecycleRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\UserControl\ChooseReceiveMan.cs.resx">
+      <DependentUpon>ChooseReceiveMan.cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\UserControl\MyInputStartBillAndEndBill.resx">
+      <DependentUpon>MyInputStartBillAndEndBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonModule\Print\FrmCancelRecord.resx">
+      <DependentUpon>FrmCancelRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataBase\STO.Backup.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataBase\STO.Bill.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataBase\STO.UserCenter.db" />
+    <None Include="Doc\2015-8-17打印助手网点客户建议收集报告.docx" />
+    <None Include="Doc\京东卖家平台导出订单.csv" />
+    <None Include="Doc\中通打印助手使用说明手册.doc" />
+    <None Include="Doc\打印助手推广方案.doc" />
+    <None Include="Doc\打印问题汇总 --2015.07.21.xlsx" />
+    <None Include="Doc\淘宝导出订单.csv" />
+    <None Include="Doc\申通电子面单文档\敏思达大客户平台通用接口_v2.7.doc" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Template\EMS.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\GZND.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\HTKY.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\ImportBill.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\LHT.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\Order.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\QF1.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\QF2.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\SF2015Bill.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\SFBill.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\STO.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\TB.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\TSC台式热敏打印机三联电子面单模板\Zto200CODElecBill.grf" />
+    <None Include="Template\TSC台式热敏打印机三联电子面单模板\Zto200ElecBill.grf" />
+    <None Include="Template\TSC台式热敏打印机三联电子面单模板\Zto200ToPayMentElecBill.grf" />
+    <None Include="Template\TTK.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\TTK淘宝.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\XCJB1.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\XCJB2.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\YTO.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\YUNDA.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\ZJS.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\ZTO.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\Zto180CODElecBill.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\Zto180ElecBill.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\Zto180ToPayMentElecBill.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\Zto190ElecBill.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\Zto200CODElecBill.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\ZTOBill.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\ZTOCODBill.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\ZTOInnerBill.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\ZTOMainBill.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\ZTOTaoBaoBill.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\ZTOToPayMentBill.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\Zto200ToPayMentElecBill.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\Zto200ElecBill.grf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Template\便携式打印机三联电子面单模板\Zto200CODElecBill.grf" />
+    <None Include="Template\便携式打印机三联电子面单模板\Zto200ElecBill.grf" />
+    <None Include="Template\便携式打印机三联电子面单模板\Zto200ToPayMentElecBill.grf" />
+    <None Include="Template\新版本的ImportBill-不用了.xls" />
+    <None Include="Utilities\PrinterHelperExtend\api32.chm" />
+    <Compile Include="Utilities\ZtoElecBillHelper.Extend.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Doc\打印机型号.jpg" />
+    <Content Include="Doc\中通电子面单190模板.jpg" />
+    <Content Include="Doc\中通电子面单180模板.png" />
+    <Content Include="Doc\Sqlite数据库脚本.txt" />
+    <Content Include="Doc\微商地址和信息.txt" />
+    <Content Include="Doc\打印助手帮助视频合成压缩.mp4" />
+    <None Include="Resources\0.5.jpg" />
+    <None Include="Icon\STO\菜单工具\打印数据.png" />
+    <None Include="Icon\STO\菜单工具\常用发件人.png" />
+    <None Include="Icon\STO\菜单工具\常用收件人.png" />
+    <None Include="Icon\STO\菜单工具\删除回收站.png" />
+    <None Include="Icon\STO\菜单工具\取消订单回收站.png" />
+    <None Include="Icon\STO\菜单工具\系统设置.png" />
+    <None Include="Icon\STO\菜单工具\调整模版.png" />
+    <None Include="Icon\STO\菜单工具\设置模版.png" />
+    <None Include="Icon\STO\菜单工具\定制模版.png" />
+    <None Include="Icon\STO\菜单工具\软件升级.png" />
+    <None Include="Icon\STO\菜单工具\用户手册.png" />
+    <None Include="Icon\STO\菜单工具\操作视频.png" />
+    <None Include="Icon\STO\菜单工具\关于软件.png" />
+    <None Include="Icon\STO\菜单工具\QQ群.png" />
+    <None Include="Icon\STO\工具栏\新建.png" />
+    <Content Include="Icon\公众号.jpg" />
+    <Content Include="Icon\STO\工具栏\下拉.png" />
+    <Content Include="Icon\STO\工具栏\下载导入模版.png" />
+    <Content Include="Icon\STO\工具栏\切换发件人.png" />
+    <Content Include="Icon\STO\工具栏\删除.png" />
+    <Content Include="Icon\STO\工具栏\刷新.png" />
+    <Content Include="Icon\STO\工具栏\取消电子面单.png" />
+    <Content Include="Icon\STO\工具栏\导入.png" />
+    <Content Include="Icon\STO\工具栏\导出.png" />
+    <Content Include="Icon\STO\工具栏\快速打印.png" />
+    <Content Include="Icon\STO\工具栏\打印历史记录.png" />
+    <Content Include="Icon\STO\工具栏\打印预览.png" />
+    <Content Include="Icon\STO\工具栏\更新申通大头笔.png" />
+    <Content Include="Icon\STO\工具栏\未标题-1.JPG" />
+    <Content Include="Icon\STO\工具栏\生成底单.png" />
+    <Content Include="Icon\STO\工具栏\编辑.png" />
+    <Content Include="Icon\STO\工具栏\获取电子面单.png" />
+    <Content Include="Icon\STO\工具栏\补填单号.png" />
+    <None Include="Icon\电商logo\32\微店.jpg" />
+    <None Include="Icon\电商logo\32\天猫.jpg" />
+    <None Include="Icon\电商logo\32\京东.png" />
+    <None Include="Icon\电商logo\32\淘宝.png" />
+    <Content Include="logo.ico" />
+    <Content Include="Record.txt" />
+    <None Include="Resources\bg.png" />
+    <None Include="Resources\logo.jpg" />
+    <None Include="Resources\loing.gif" />
+    <None Include="Resources\posi.jpg" />
+    <None Include="Resources\sysbtn_close_down.png" />
+    <None Include="Resources\sysbtn_close_hover.png" />
+    <None Include="Resources\sysbtn_close_normal.png" />
+    <None Include="Resources\Big_1.png" />
+    <None Include="Resources\Big_2.png" />
+    <None Include="Resources\Big_3.png" />
+    <None Include="Resources\Big_4.png" />
+    <None Include="Resources\Big_5.png" />
+    <None Include="Resources\Big_6.png" />
+    <None Include="Resources\Big_7.png" />
+    <None Include="Resources\Big_8.png" />
+    <None Include="Resources\Big_9.png" />
+    <None Include="Resources\Big_10.png" />
+    <None Include="Resources\headimg_dl.jpg" />
+    <Content Include="CommonModule\AutoUpdate\loading.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CommonModule\AutoUpdate\LocalUpdate.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CommonModule\AutoUpdate\ZTO.Print.Update.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CefGlue.WindowsForms\CefGlue.WindowsForms.csproj">
+      <Project>{679af14d-8ff5-4608-bff8-ec1a7ded04a4}</Project>
+      <Name>CefGlue.WindowsForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CefGlue\CefGlue.csproj">
+      <Project>{703ff300-34b9-48d4-a5d6-e741f48d5f95}</Project>
+      <Name>CefGlue</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DotNet.Business\DotNet.Business.csproj">
+      <Project>{690ef14b-320e-439a-b0a5-3d956084dc6a}</Project>
+      <Name>DotNet.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DotNet.Model\DotNet.Model.csproj">
+      <Project>{f3734d22-79c5-4be2-888d-139a49c08ac4}</Project>
+      <Name>DotNet.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DotNet.ScreenShot\DotNet.ScreenShot.csproj">
+      <Project>{13e62362-5d00-418f-83ff-99b2699746d7}</Project>
+      <Name>DotNet.ScreenShot</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DotNet.Utilities\DotNet.Utilities.csproj">
+      <Project>{2fb4c4a9-f14c-4cdd-9d0e-7c4e7cebebdd}</Project>
+      <Name>DotNet.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\STO.Print.Business\STO.Print.Business.csproj">
+      <Project>{5d1b2d55-f8f9-4cfe-8c3c-1b8cdc5fdf28}</Project>
+      <Name>STO.Print.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\STO.Print.Model\STO.Print.Model.csproj">
+      <Project>{4982f2b2-2f5c-4368-a9ab-a428ab950233}</Project>
+      <Name>STO.Print.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\STO.Print.Utilities\STO.Print.Utilities.csproj">
+      <Project>{53ac195e-dcff-47c4-bc02-7e0241ff520c}</Project>
+      <Name>STO.Print.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

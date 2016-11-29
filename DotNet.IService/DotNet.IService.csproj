@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C817A488-6668-48C3-A8D8-2B61C8300568}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DotNet.IService</RootNamespace>
+    <AssemblyName>DotNet.IService</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IServicesLicenseService.cs" />
+    <Compile Include="IAreaService.cs" />
+    <Compile Include="IBaseItemDetailsService.cs" />
+    <Compile Include="IBaseItemsService.cs" />
+    <Compile Include="IExceptionService.cs" />
+    <Compile Include="IFileService.cs" />
+    <Compile Include="IFolderService.cs" />
+    <Compile Include="ILogOnService.cs" />
+    <Compile Include="ILogService.cs" />
+    <Compile Include="IMessageService.Area.cs" />
+    <Compile Include="IMessageService.cs" />
+    <Compile Include="IMobileService.cs" />
+    <Compile Include="IMobileService.ZTO.cs" />
+    <Compile Include="IModifyRecordService.cs" />
+    <Compile Include="IModuleService.cs" />
+    <Compile Include="IOrganizeService.cs" />
+    <Compile Include="IParameterService.cs" />
+    <Compile Include="IPermissionService.cs" />
+    <Compile Include="IPermissionService.Organize.cs" />
+    <Compile Include="IPermissionService.Resource.cs" />
+    <Compile Include="IPermissionService.Role.cs" />
+    <Compile Include="IPermissionService.Test.cs" />
+    <Compile Include="IPermissionService.User.cs" />
+    <Compile Include="IRoleService.cs" />
+    <Compile Include="ISequenceService.cs" />
+    <Compile Include="IServiceFactory.cs" />
+    <Compile Include="IServiceFactory.WorkFlow.cs" />
+    <Compile Include="IStaffService.cs" />
+    <Compile Include="ITableColumnsService.cs" />
+    <Compile Include="IUserService.cs" />
+    <Compile Include="IWorkFlowActivityAdminService.cs" />
+    <Compile Include="IWorkFlowCurrentService.cs" />
+    <Compile Include="IWorkFlowManager.cs" />
+    <Compile Include="IWorkFlowProcessAdminService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IDepartmentService.cs" />
+    <Compile Include="IStationService.cs" />
+    <Compile Include="ILanguageService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DotNet.Model\DotNet.Model.csproj">
+      <Project>{f3734d22-79c5-4be2-888d-139a49c08ac4}</Project>
+      <Name>DotNet.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DotNet.Utilities\DotNet.Utilities.csproj">
+      <Project>{2fb4c4a9-f14c-4cdd-9d0e-7c4e7cebebdd}</Project>
+      <Name>DotNet.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

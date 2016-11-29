@@ -1,0 +1,750 @@
+﻿Object Report
+	Version='5.8.0.6'
+	Title='你的报表标题'
+	Object Font
+		Name='宋体'
+		Size=105000,0
+		Weight=400
+		Charset=134
+	End
+	Object Printer
+		Size=256
+		Width=10
+		Height=19
+		LeftMargin=0
+		TopMargin=0
+		RightMargin=0
+		BottomMargin=0
+		PrintOffsetSaveToLocal=T
+	End
+	Object DetailGrid
+		Object Recordset
+			Items Field
+				Item
+					Name='单号'
+				End
+				Item
+					Name='寄件人姓名'
+				End
+				Item
+					Name='寄件人公司'
+				End
+				Item
+					Name='寄件人手机'
+				End
+				Item
+					Name='寄件人电话'
+				End
+				Item
+					Name='寄件人详址'
+				End
+				Item
+					Name='始发地'
+				End
+				Item
+					Name='收件人姓名'
+				End
+				Item
+					Name='收件人公司'
+				End
+				Item
+					Name='收件人手机'
+				End
+				Item
+					Name='收件人电话'
+				End
+				Item
+					Name='收件人详址'
+				End
+				Item
+					Name='备注'
+				End
+				Item
+					Name='目的地'
+				End
+				Item
+					Name='重量'
+				End
+				Item
+					Name='总数量'
+				End
+				Item
+					Name='价格'
+				End
+				Item
+					Name='订单号'
+				End
+				Item
+					Name='运费'
+				End
+				Item
+					Name='运单总费'
+				End
+				Item
+					Name='品名'
+				End
+				Item
+					Name='寄件时间'
+				End
+				Item
+					Name='Count'
+				End
+				Item
+					Name='Page'
+				End
+				Item
+					Name='大头笔'
+				End
+			End
+		End
+		Items Column
+			Item
+				Name='Column1'
+				Width=10.1865
+			End
+		End
+		Object ColumnContent
+			Height=18.8119
+			Items ColumnContentCell
+				Item
+					Column='Column1'
+					FreeCell=T
+					Items Control
+						Item
+							Type=Barcode
+							Name='Barcode3'
+							Left=0.396875
+							Top=6.50875
+							Width=8.99583
+							Height=1.79917
+							BarcodeType=Code128C
+							DataField='单号'
+							Text='[#单号#]'
+							Object Font
+								Name='微软雅黑'
+								Size=105000,0
+								Weight=400
+								Charset=134
+							End
+						End
+						Item
+							Type=Line
+							Name='Line12'
+							Top=1.19063
+							Width=10.0013
+						End
+						Item
+							Type=Line
+							Name='Line13'
+							Top=3.81
+							Width=10.0013
+						End
+						Item
+							Type=Line
+							Name='Line14'
+							Top=5.13292
+							Width=10.0013
+						End
+						Item
+							Type=Line
+							Name='Line15'
+							Top=6.45583
+							Width=10.0013
+						End
+						Item
+							Type=Line
+							Name='Line16'
+							Top=12.4883
+							Width=10.0013
+						End
+						Item
+							Type=Line
+							Name='Line17'
+							Top=10.2129
+							Width=10.0013
+						End
+						Item
+							Type=Line
+							Name='Line18'
+							Top=16.5894
+							Width=10.0013
+						End
+						Item
+							Type=Line
+							Name='Line19'
+							Top=15.7163
+							Width=10.0013
+						End
+						Item
+							Type=Line
+							Name='Line20'
+							Top=14.2081
+							Width=10.0013
+						End
+						Item
+							Type=Barcode
+							Name='Barcode4'
+							Left=3.59833
+							Top=10.6098
+							Width=6.19125
+							Height=1.5875
+							BarcodeType=Code128C
+							DataField='单号'
+							Text='[#单号#]'
+							Object Font
+								Name='微软雅黑'
+								Size=105000,0
+								Weight=400
+								Charset=134
+							End
+						End
+						Item
+							Type=Line
+							Name='Line21'
+							Left=3.41313
+							Top=10.2129
+							Height=2.27544
+						End
+						Item
+							Type=Line
+							Name='Line22'
+							Left=3.41313
+							Top=15.7692
+							Height=2.96333
+						End
+						Item
+							Type=Line
+							Name='Line23'
+							Left=3.99521
+							Height=1.19063
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox1'
+							Left=3.99521
+							Width=2.59292
+							Height=0.608542
+							Object Font
+								Name='微软雅黑'
+								Size=105000,0
+								Weight=400
+								Charset=134
+							End
+							Text='页：[#Page#]/[#Count#]'
+						End
+						Item
+							Type=MemoBox
+							Name='单号'
+							Left=6.58813
+							Width=3.41313
+							Height=0.608542
+							Object Font
+								Name='微软雅黑'
+								Size=105000,0
+								Weight=400
+								Charset=134
+							End
+							Text='[#单号#]'
+						End
+						Item
+							Type=Line
+							Name='Line24'
+							Left=3.99521
+							Top=0.608542
+							Width=6.21776
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox2'
+							Left=3.99521
+							Top=0.608542
+							Width=6.21771
+							Height=0.582083
+							Object Font
+								Name='微软雅黑'
+								Size=105000,0
+								Weight=400
+								Charset=134
+							End
+							TextAlign=MiddleCenter
+							Text='[#寄件人公司#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox3'
+							Left=0.185208
+							Top=1.19063
+							Width=4.20688
+							Height=0.608542
+							Object Font
+								Name='微软雅黑'
+								Size=120000,0
+								Bold=T
+								Charset=134
+							End
+							Text='收件人:[#收件人姓名#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox4'
+							Left=4.57729
+							Top=1.19063
+							Width=5.60917
+							Height=0.608542
+							Object Font
+								Name='微软雅黑'
+								Size=120000,0
+								Bold=T
+								Charset=134
+							End
+							Text='电话:[#收件人电话#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox5'
+							Left=0.211667
+							Top=1.77271
+							Width=10.0013
+							Height=1.42875
+							Object Font
+								Name='微软雅黑'
+								Size=120000,0
+								Bold=T
+								Charset=134
+							End
+							WordWrap=T
+							TextAlign=TopLeft
+							Text='地址:[#收件人详址#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox6'
+							Left=0.185208
+							Top=3.20146
+							Width=10.0013
+							Height=0.608542
+							Object Font
+								Name='微软雅黑'
+								Size=105000,0
+								Bold=T
+								Charset=134
+							End
+							Text='品名:[#品名#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox7'
+							Left=0.185208
+							Top=3.78354
+							Width=4.20688
+							Height=0.608542
+							Object Font
+								Name='微软雅黑'
+								Size=90000,0
+								Weight=400
+								Charset=134
+							End
+							Text='寄件人:[#寄件人姓名#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox8'
+							Left=4.57729
+							Top=3.78354
+							Width=5.60917
+							Height=0.608542
+							Object Font
+								Name='微软雅黑'
+								Size=90000,0
+								Weight=400
+								Charset=134
+							End
+							Text='联系方式:[#寄件人电话#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox9'
+							Left=0.185208
+							Top=4.23333
+							Width=10.0013
+							Height=0.608542
+							Object Font
+								Name='微软雅黑'
+								Size=90000,0
+								Weight=400
+								Charset=134
+							End
+							TextAlign=TopLeft
+							Text='地址:[#寄件人详址#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox10'
+							Top=5.18583
+							Width=10.0013
+							Height=1.19063
+							Object Font
+								Name='微软雅黑'
+								Size=217500,0
+								Bold=T
+								Charset=134
+							End
+							TextAlign=MiddleCenter
+							Text='[#大头笔#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox12'
+							Left=0.211667
+							Top=13.0969
+							Width=10.0013
+							Height=1.11125
+							Object Font
+								Name='微软雅黑'
+								Size=105000,0
+								Weight=400
+								Charset=134
+							End
+							WordWrap=T
+							TextAlign=TopLeft
+							Text='地址:[#收件人详址#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox13'
+							Left=4.60375
+							Top=12.5413
+							Width=5.60917
+							Height=0.608542
+							Object Font
+								Name='微软雅黑'
+								Size=105000,0
+								Weight=400
+								Charset=134
+							End
+							Text='电话:[#收件人电话#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox14'
+							Left=0.211667
+							Top=12.5413
+							Width=4.20688
+							Height=0.608542
+							Object Font
+								Name='微软雅黑'
+								Size=105000,0
+								Weight=400
+								Charset=134
+							End
+							Text='收件人:[#收件人姓名#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox15'
+							Left=0.238125
+							Top=14.7108
+							Width=10.0013
+							Height=0.846667
+							Object Font
+								Name='微软雅黑'
+								Size=90000,0
+								Weight=400
+								Charset=134
+							End
+							TextAlign=TopLeft
+							Text='地址:[#寄件人详址#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox16'
+							Left=4.63021
+							Top=14.1817
+							Width=5.60917
+							Height=0.608542
+							Object Font
+								Name='微软雅黑'
+								Size=90000,0
+								Weight=400
+								Charset=134
+							End
+							Text='联系方式:[#寄件人电话#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox17'
+							Left=0.238125
+							Top=14.1817
+							Width=4.20688
+							Height=0.608542
+							Object Font
+								Name='微软雅黑'
+								Size=90000,0
+								Weight=400
+								Charset=134
+							End
+							Text='寄件人:[#寄件人姓名#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox28'
+							Left=5.00063
+							Top=3.20146
+							Width=4.68313
+							Height=0.714375
+							Object Font
+								Name='微软雅黑'
+								Size=105000,0
+								Bold=T
+								Charset=134
+							End
+							Text='[#寄件时间#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox29'
+							Left=0.291042
+							Top=8.41375
+							Width=4.73604
+							Height=1.74625
+							Object Font
+								Name='微软雅黑'
+								Size=90000,0
+								Weight=400
+								Charset=134
+							End
+							WordWrap=T
+							TextAlign=TopLeft
+							Text='您对此单的签收，代表您已经验货，确认商品信息无误，包装完好，没有划痕、破损等表面质量问题'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox30'
+							Left=5.3975
+							Top=8.41375
+							Width=1.37583
+							Height=0.582083
+							Object Font
+								Name='微软雅黑'
+								Size=105000,0
+								Weight=400
+								Charset=134
+							End
+							Text='签收人:'
+						End
+						Item
+							Type=Line
+							Name='Line25'
+							Top=8.30792
+							Width=10.0013
+						End
+						Item
+							Type=Line
+							Name='Line26'
+							Left=5.21229
+							Top=8.33438
+							Height=1.85208
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox27'
+							Left=0.396875
+							Top=15.7956
+							Width=4.25979
+							Height=0.714375
+							Object Font
+								Name='微软雅黑'
+								Size=105000,0
+								Bold=T
+								Charset=134
+							End
+							Text='[#寄件时间#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox18'
+							Left=3.59833
+							Top=15.7692
+							Width=6.19125
+							Height=0.79375
+							Object Font
+								Name='微软雅黑'
+								Size=120000,0
+								Weight=400
+								Charset=134
+							End
+							WordWrap=T
+							TextAlign=MiddleCenter
+							Text='[#订单号#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox25'
+							Left=3.62479
+							Top=16.6952
+							Width=6.08542
+							Height=1.93146
+							Object Font
+								Name='微软雅黑'
+								Size=105000,0
+								Weight=400
+								Charset=134
+							End
+							WordWrap=T
+							Text='备注:[#备注#]'
+						End
+						Item
+							Type=PictureBox
+							Name='picQRCode'
+							Left=0.396875
+							Top=16.801
+							Width=2.77813
+							Height=1.79917
+							Picture=1915
+89504E470D0A1A0A0000000D4948445200000083000000830806000000AE9DA866000000017352474200AECE1CE90000
+000467414D410000B18F0BFC6105000000097048597300000EC300000EC301C76FA8640000071049444154785EED9241
+AAE04A0E04FBFE97EED97C4C11080749CA8F794D05C42AA54436F5E7EFE5F21FF7315C1EEE63B83CDCC77079B88FE1F2
+701FC3E5E13E86CBC37D0C9787FB182E0FF7315C1EEE63B83CDCC77079B88FE1F2701FC3E5E13E86CB43F518FEFCF9F3
+A39234A786CDA7F9D7B6540DD3415F4AD29C1A369FE65FDB52354C077D2949736AD87C9A7F6D4BD5301DF4A524CDA961
+F369FEB52D55C3F631C4FA99B76EF3DBFAAB86ED6388F5336FDDE6B7F5570DDBC710EB67DEBACD6FEBAF1AB68F21D6CF
+BC759BDFD65F35D831CC4D92E6D49876DE4CB17DE626B13CA56AB063989B24CDA931EDBC9962FBCC4D62794AD560C730
+37499A5363DA7933C5F6999BC4F294AAC18E616E9234A7C6B4F3668AED333789E52955831DC3DC24961BDBFB26497393
+589E5235D831CC4D62B9B1BD6F92343789E52955831DC3DC24961BDBFB26497393589E5235D831CC4D62B9B1BD6F9234
+3789E52955831DC3DC24694E53A68E53B29D9BC4F294AAC18E616E9234A72953C729D9CE4D62794AD560C73037499AD3
+94A9E3946CE726B13CA56AB063989B24CD69CAD4714AB67393589E52356C1F43B6FBD9979AD2EE1BDBFD55C3F63164BB
+9F7DA929EDBEB1DD5F356C1F43B6FBD9979AD2EE1BDBFD55C3F63164BB9F7DA929EDBEB1DD5F35F098AF25BF2DFFDA96
+AA613AE84BC96FCBBFB6A56A980EFA52F2DBF2AF6DA91AA683BE94FCB6FC6B5BFA86FF23ECE730A7649A39FDD7B88FE1
+904C33A7FF1AF7311C9269E6F45FE33E864332CD9CFE6B545F94FE1CCE6FDB3275361A36CFDC6CA91AD26338BF6DCBD4
+D968D83C73B3A56A488FE1FCB62D5367A361F3CCCD96AA213D86F3DBB64C9D8D86CD33375BAA063BA6CD5BAC3FCD2949
+F3D66DAA463BAECD5BAC3FCD2949F3D66DAA463BAECD5BAC3FCD2949F3D66DAA463BAECD5BAC3FCD2949F3D66DAAC6E9
+C05392E694FC744E8D69E794584ED279A36AE03194A439253F9D5363DA3925969374DEA81A780C25694EC94FE7D49876
+4E89E5249D37AA061E43499A53F2D33935A69D53623949E78DAA81C7D09476DF603F25D3CC698AED334F6DA91AA6834E
+53DA7D83FD944C33A729B6CF3CB5A56A980E3A4D69F70DF65332CD9CA6D83EF3D496AA613AE834A5DD37D84FC934739A
+62FBCC535BAA86E9A04432CDBC49A6995363DA3925D3CC9BDB6CF7570D3C26954C336F9269E6D498764EC934F3E636DB
+FD55038F4925D3CC9B649A3935A69D5332CDBCB9CD767FD5C06352C934F32699664E8D69E7944C336F6EB3DDBF7F6140
+FA319CA729E97E3A6FA47DE97CCA7E6340FA719CA729E97E3A6FA47DE97CCA7E6340FA719CA729E97E3A6FA47DE97CCA
+7E6340FA719CA729E97E3A6FA47DE97CCA7E63807D9CE584F33465EA38259613CEB7B6F40D05F6319613CED394A9E394
+584E38DFDAD23714D8C7584E384F53A68E536239E17C6B4BDF50601F6339E13C4D993A4E89E584F3AD2D7DC3811D6779
+8AF5A5796ACAD4714ADA3CA56F38B0E32C4FB1BE344F4D993A4E499BA7F40D07769CE529D697E6A92953C72969F394BE
+E1C08EB33CC5FAD23C3565EA38256D9ED2371CF038D398764E499AD394A9A3914C33A7DBAC364E07BF694C3BA724CD69
+CAD4D148A699D36D561BA783DF34A69D5392E63465EA6824D3CCE936AB8DD3C16F1AD3CE2949739A3275349269E6749B
+FDC61FC47E0E73DAD2F6A5FBE97CCA7EE30F623F87396D69FBD2FD743E65BFF107B19FC39CB6B47DE97E3A9FB2DFF883
+D8CF614E5BDABE743F9D4FA91A79DCD792EDDC24DB3935D279A36AE0315F4BB673936CE7D448E78DAA81C77C2DD9CE4D
+B29D53239D37AA061EF3B5643B37C9764E8D74DEA81AB68F21D66F39B1F934A729EDFE36D5055F7F8CF55B4E6C3ECD69
+4ABBBF4D75C1D71F63FD96139B4F739AD2EE6F535DF0F5C758BFE5C4E6D39CA6B4FBDB5417D8C73037C9764E499A7FAD
+91CE1B55831DC3DC24DB392569FEB5463A6F540D760C73936CE794A4F9D71AE9BC5135D831CC4DB29D5392E65F6BA4F3
+46D560C73037499B1BDCA7C6B49348D29CB6540D760C7393B4B9C17D6A4C3B8924CD694BD560C73037499B1BDCA7C6B4
+9348D29CB6540D760C7393B4B9C17D6A4C3B8924CD694BD560C7303789E506F729B1BC85FD944C336FB6540D760C7393
+586E709F12CB5BD84FC934F3664BD560C7303789E506F729B1BC85FD944C336FB6540D760C7393586E709F12CB5BD84F
+C934F3664BD5B07D0C49FB39DF4AB6734AA699375BAA86ED6348DACFF956B29D5332CDBCD952356C1F43D27ECEB792ED
+9C9269E6CD96AA61FB1892F673BE956CE7944C336FB6540DD3415F4A2C279C378D69E73425DD4FE78DAA81C77C2DB19C
+70DE34A69DD394743F9D37AA061EF3B5C472C279D398764E53D2FD74DEA81A78CCD712CB09E74D63DA394D49F7D379A3
+6FB8FC33DCC77079B88FE1F2701FC3E5E13E86CBC37D0C9787FB182E0FF7315C1EEE63B83CDCC77079B88FE1F2701FC3
+E5E13E86CBC37D0C9787FB182E0FF7315CFEE3EFDFFF018F9070DF3DAB3A2C0000000049454E44AE426082
+						End
+						Item
+							Type=MemoBox
+							Name='收件人公司'
+							Left=0.211667
+							Top=2.88396
+							Width=9.65729
+							Height=0.396875
+							Object Font
+								Name='微软雅黑'
+								Size=90000,0
+								Weight=400
+								Charset=134
+							End
+							Text='[#收件人公司#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox36'
+							Left=8.81062
+							Top=9.57792
+							Width=1.24354
+							Height=0.873125
+							Object Font
+								Name='微软雅黑'
+								Size=105000,0
+								Bold=T
+								Charset=134
+							End
+							Text='已验视'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox32'
+							Left=5.3975
+							Top=9.2075
+							Width=1.03188
+							Height=0.873125
+							Object Font
+								Name='微软雅黑'
+								Size=105000,0
+								Weight=400
+								Charset=134
+							End
+							Text='时间:'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox38'
+							Left=0.211667
+							Top=4.7625
+							Width=9.49854
+							Height=0.396875
+							Object Font
+								Name='微软雅黑'
+								Size=90000,0
+								Weight=400
+								Charset=134
+							End
+							Text='[#寄件人公司#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox39'
+							Left=0.211667
+							Top=15.3458
+							Width=9.47208
+							Height=0.396875
+							Object Font
+								Name='微软雅黑'
+								Size=90000,0
+								Weight=400
+								Charset=134
+							End
+							Text='[#寄件人公司#]'
+						End
+						Item
+							Type=MemoBox
+							Name='MemoBox40'
+							Left=0.211667
+							Top=13.8113
+							Width=9.63083
+							Height=0.396875
+							Object Font
+								Name='微软雅黑'
+								Size=90000,0
+								Weight=400
+								Charset=134
+							End
+							Text='[#收件人公司#]'
+						End
+					End
+				End
+			End
+		End
+		Object ColumnTitle
+			Height=0
+			Items ColumnTitleCell
+				Item
+					GroupTitle=F
+					Column='Column1'
+					Text='Column1'
+				End
+			End
+		End
+	End
+End

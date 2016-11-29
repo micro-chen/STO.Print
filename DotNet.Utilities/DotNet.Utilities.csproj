@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2FB4C4A9-F14C-4CDD-9D0E-7C4E7CEBEBDD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DotNet.Utilities</RootNamespace>
+    <AssemblyName>DotNet.Utilities</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>SecurityRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\External\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\External\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\External\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\External\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\External\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\External\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess">
+      <HintPath>..\External\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\External\System.Data.SQLite.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbUtilities\DbHelper.cs" />
+    <Compile Include="DbUtilities\DbHelperFactory.cs" />
+    <Compile Include="DbUtilities\BaseDbHelper.cs" />
+    <Compile Include="DbUtilities\BaseDbHelper.Method.cs" />
+    <Compile Include="DbUtilities\DbProvider\MySqlHelper.cs" />
+    <Compile Include="DbUtilities\DbProvider\OracleHelper.cs" />
+    <Compile Include="DbUtilities\DbProvider\SqlHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DbUtilities\DbProvider\SqLiteHelper.cs" />
+    <Compile Include="DbUtilities\Extension\DataReaderExtension.cs" />
+    <Compile Include="DbUtilities\Extension\DataTableExtension.cs" />
+    <Compile Include="DbUtilities\IDbHelper.cs" />
+    <Compile Include="DbUtilities\Extension\IDbHelper.Expand.cs" />
+    <Compile Include="DbUtilities\DbHelper.Method.cs" />
+    <Compile Include="Message\AppMessage.Service.cs" />
+    <Compile Include="Message\AppMessage.Message.cs" />
+    <Compile Include="Message\AuditStatus.cs" />
+    <Compile Include="Utilities\BaseBusinessLogic.Convert.cs" />
+    <Compile Include="Utilities\BaseExportCSV.cs" />
+    <Compile Include="DbUtilities\CurrentDbType.cs" />
+    <Compile Include="Configuration\BaseConfiguration.cs" />
+    <Compile Include="Utilities\BaseExportExcel.cs" />
+    <Compile Include="Utilities\BaseSortLogic.cs" />
+    <Compile Include="Configuration\UserConfigHelper.cs" />
+    <Compile Include="BaseUserInfo.cs" />
+    <Compile Include="BaseSystemInfo.cs" />
+    <Compile Include="Utilities\BaseRandom.cs" />
+    <Compile Include="Configuration\ConfigurationHelper.cs" />
+    <Compile Include="Utilities\DownloadTemplate.cs" />
+    <Compile Include="Message\EnumDescription.cs" />
+    <Compile Include="Message\EnumExtensions.cs" />
+    <Compile Include="Utilities\IBaseBrowser.cs" />
+    <Compile Include="Utilities\ImportUtil.cs" />
+    <Compile Include="Utilities\IPHelper.cs" />
+    <Compile Include="Utilities\MachineInfo.cs" />
+    <Compile Include="Utilities\DateUtil.cs" />
+    <Compile Include="Utilities\FileUtil.cs" />
+    <Compile Include="Utilities\LogUtil.cs" />
+    <Compile Include="Message\MessageCategory.cs" />
+    <Compile Include="Message\MessageFunction.cs" />
+    <Compile Include="Message\MessageStateCode.cs" />
+    <Compile Include="Utilities\MailUtil.cs" />
+    <Compile Include="Utilities\PageInfo.cs" />
+    <Compile Include="Message\PermissionOrganizeScope.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Message\AppMessage.cs" />
+    <Compile Include="Message\Resources.cs" />
+    <Compile Include="Utilities\BaseBusinessLogic.cs" />
+    <Compile Include="Configuration\ConfigurationCategory.cs" />
+    <Compile Include="DbUtilities\DbOperation.cs" />
+    <Compile Include="Message\DefaultRole.cs" />
+    <Compile Include="Message\OrganizeCategory.cs" />
+    <Compile Include="Message\OperationCode.cs" />
+    <Compile Include="Utilities\SecretUtil.Check.cs" />
+    <Compile Include="Utilities\SQLTrace.cs" />
+    <Compile Include="Utilities\StringUtil.PinyinHelper.cs" />
+    <Compile Include="Utilities\ReflectionUtil.cs" />
+    <Compile Include="Utilities\SecretUtil.cs" />
+    <Compile Include="Message\Status.cs" />
+    <Compile Include="Utilities\StringUtil.cs" />
+    <Compile Include="Utilities\BaseResult.cs" />
+    <Compile Include="Utilities\ValidateUtil.cs" />
+    <Compile Include="Utilities\VerifyCodeImage.cs" />
+    <Compile Include="Utilities\BaseBusinessLogic.Field.cs" />
+    <Compile Include="Utilities\BaseBusinessLogic.DataTable.cs" />
+    <Compile Include="BaseSystemInfo.Database.cs" />
+    <Compile Include="BaseSystemInfo.Secret.cs" />
+    <Compile Include="BaseSystemInfo.Permission.cs" />
+    <Compile Include="BaseSystemInfo.UserInfo.cs" />
+    <Compile Include="BaseSystemInfo.Company.cs" />
+    <Compile Include="BaseSystemInfo.Client.cs" />
+    <Compile Include="BaseSystemInfo.Server.cs" />
+    <Compile Include="BaseSystemInfo.WorkFlow.cs" />
+    <Compile Include="Utilities\SecretUtil.Web.cs" />
+    <Compile Include="BaseUserInfo.ZTO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="Message\Sample.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataBase\17monipdb.dat" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

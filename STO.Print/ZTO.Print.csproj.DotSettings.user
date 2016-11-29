@@ -1,0 +1,3 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeEditing/Localization/MoveToResource/LastResourceFile/@EntryValue">C89EA268-69F6-4448-91D9-D24574C7E09A/d:Properties/f:Resources.resx</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/Search/HighlightUsagesHintUsed/@EntryValue">True</s:Boolean></wpf:ResourceDictionary>

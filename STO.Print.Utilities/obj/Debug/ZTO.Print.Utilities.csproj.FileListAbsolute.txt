@@ -1,0 +1,12 @@
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\WHC.OrderWater.Commons\bin\Debug\ZTO.Print.Utilities.xml
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\WHC.OrderWater.Commons\bin\Debug\ZTO.Print.Utilities.dll
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\WHC.OrderWater.Commons\bin\Debug\ZTO.Print.Utilities.pdb
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\WHC.OrderWater.Commons\bin\Debug\log4net.dll
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\WHC.OrderWater.Commons\bin\Debug\Office.dll
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\WHC.OrderWater.Commons\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\WHC.OrderWater.Commons\obj\Debug\ZTO.Print.Utilities.csproj.ResolveComReference.cache
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\WHC.OrderWater.Commons\obj\Debug\ZTO.Print.Utilities.CoolPrintPreviewDialog.resources
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\WHC.OrderWater.Commons\obj\Debug\ZTO.Print.Utilities.PrintOptions.resources
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\WHC.OrderWater.Commons\obj\Debug\ZTO.Print.Utilities.csproj.GenerateResource.Cache
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\WHC.OrderWater.Commons\obj\Debug\ZTO.Print.Utilities.dll
+C:\Users\yhl\Desktop\中通工作文件\GIT\ZTO.Print\WHC.OrderWater.Commons\obj\Debug\ZTO.Print.Utilities.pdb

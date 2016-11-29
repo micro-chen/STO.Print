@@ -1,0 +1,6 @@
+I:\ZTO-Work\运单打印工具项目\运单打印工具项目\ZTO.BillPrinter\ZTO.BillPrinter\bin\Release\ZTO.BillPrint.exe.config
+I:\ZTO-Work\运单打印工具项目\运单打印工具项目\ZTO.BillPrinter\ZTO.BillPrinter\obj\Release\Interop.grdes6Lib.dll
+I:\ZTO-Work\运单打印工具项目\运单打印工具项目\ZTO.BillPrinter\ZTO.BillPrinter\obj\Release\Interop.gregn6Lib.dll
+I:\ZTO-Work\运单打印工具项目\运单打印工具项目\ZTO.BillPrinter\ZTO.BillPrinter\obj\Release\AxInterop.grdes6Lib.dll
+I:\ZTO-Work\运单打印工具项目\运单打印工具项目\ZTO.BillPrinter\ZTO.BillPrinter\obj\Release\AxInterop.gregn6Lib.dll
+I:\ZTO-Work\运单打印工具项目\运单打印工具项目\ZTO.BillPrinter\ZTO.BillPrinter\obj\Release\ZTO.BillPrint.csproj.ResolveComReference.cache

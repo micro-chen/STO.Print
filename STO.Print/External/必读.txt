@@ -1,0 +1,4 @@
+grdes50.dll和gregn50.dll两个dll文件需要用dos命令注册到注册表中，程序才可以运行
+
+
+例子：regsvr32.exe dll的文件路径

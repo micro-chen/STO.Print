@@ -1,0 +1,459 @@
+﻿//-----------------------------------------------------------------------
+// <copyright file="UserByIdentityEntity.cs" company="Hairihan">
+//     Copyright (c) 2013 , All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Data;
+
+namespace DotNet.Business
+{
+    using DotNet.Utilities;
+
+    /// <summary>
+    /// UserByIdentityEntity
+    /// 
+    /// 
+    /// 修改纪录
+    /// 
+    /// 2013-07-14 版本：1.0 JiRiGaLa 创建主键。
+    /// 
+    /// <author>
+    ///     <name>JiRiGaLa</name>
+    ///     <date>2013-07-14</date>
+    /// </author>
+    /// </summary>
+    public partial class UserByIdentityEntity : BaseEntity
+    {
+        private int id;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+            set
+            {
+                id = value;
+            }
+        }
+
+        private String fullName = string.Empty;
+        /// <summary>
+        /// 
+        /// </summary>
+        [StringLength(50, ErrorMessage = "不能超过50个字符")] 
+        public String FullName
+        {
+            get
+            {
+                return fullName;
+            }
+            set
+            {
+                fullName = value;
+            }
+        }
+
+        private Decimal? salary = 0;
+        /// <summary>
+        /// 
+        /// </summary>
+        public Decimal? Salary
+        {
+            get
+            {
+                return salary;
+            }
+            set
+            {
+                salary = value;
+            }
+        }
+
+        private int? age = 0;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int? Age
+        {
+            get
+            {
+                return age;
+            }
+            set
+            {
+                age = value;
+            }
+        }
+
+        private DateTime? birthday = DateTime.Now;
+        /// <summary>
+        /// 
+        /// </summary>
+        public DateTime? Birthday
+        {
+            get
+            {
+                return birthday;
+            }
+            set
+            {
+                birthday = value;
+            }
+        }
+
+        private Byte[] photo = null;
+        /// <summary>
+        /// 
+        /// </summary>
+        public Byte[] Photo
+        {
+            get
+            {
+                return photo;
+            }
+            set
+            {
+                photo = value;
+            }
+        }
+
+        private int? allowEdit = 1;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int? AllowEdit
+        {
+            get
+            {
+                return allowEdit;
+            }
+            set
+            {
+                allowEdit = value;
+            }
+        }
+
+        private int? allowDelete = 1;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int? AllowDelete
+        {
+            get
+            {
+                return allowDelete;
+            }
+            set
+            {
+                allowDelete = value;
+            }
+        }
+
+        private int sortCode;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int SortCode
+        {
+            get
+            {
+                return sortCode;
+            }
+            set
+            {
+                sortCode = value;
+            }
+        }
+
+        private int? enabled = 1;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int? Enabled
+        {
+            get
+            {
+                return enabled;
+            }
+            set
+            {
+                enabled = value;
+            }
+        }
+
+        private int? deletionStateCode = 0;
+        /// <summary>
+        /// 
+        /// </summary>
+        public int? DeletionStateCode
+        {
+            get
+            {
+                return deletionStateCode;
+            }
+            set
+            {
+                deletionStateCode = value;
+            }
+        }
+
+        private String description = string.Empty;
+        /// <summary>
+        /// 
+        /// </summary>
+        [StringLength(50, ErrorMessage = "不能超过50个字符")] 
+        public String Description
+        {
+            get
+            {
+                return description;
+            }
+            set
+            {
+                description = value;
+            }
+        }
+
+        private DateTime? createOn = null;
+        /// <summary>
+        /// 
+        /// </summary>
+        public DateTime? CreateOn
+        {
+            get
+            {
+                return createOn;
+            }
+            set
+            {
+                createOn = value;
+            }
+        }
+
+        private String createUserId = string.Empty;
+        /// <summary>
+        /// 
+        /// </summary>
+        [StringLength(50, ErrorMessage = "不能超过50个字符")] 
+        public String CreateUserId
+        {
+            get
+            {
+                return createUserId;
+            }
+            set
+            {
+                createUserId = value;
+            }
+        }
+
+        private String createBy = string.Empty;
+        /// <summary>
+        /// 
+        /// </summary>
+        [StringLength(50, ErrorMessage = "不能超过50个字符")] 
+        public String CreateBy
+        {
+            get
+            {
+                return createBy;
+            }
+            set
+            {
+                createBy = value;
+            }
+        }
+
+        private DateTime? modifiedOn = null;
+        /// <summary>
+        /// 
+        /// </summary>
+        public DateTime? ModifiedOn
+        {
+            get
+            {
+                return modifiedOn;
+            }
+            set
+            {
+                modifiedOn = value;
+            }
+        }
+
+        private String modifiedUserId = string.Empty;
+        /// <summary>
+        /// 
+        /// </summary>
+        [StringLength(50, ErrorMessage = "不能超过50个字符")] 
+        public String ModifiedUserId
+        {
+            get
+            {
+                return modifiedUserId;
+            }
+            set
+            {
+                modifiedUserId = value;
+            }
+        }
+
+        private String modifiedBy = string.Empty;
+        /// <summary>
+        /// 
+        /// </summary>
+        [StringLength(50, ErrorMessage = "不能超过50个字符")] 
+        public String ModifiedBy
+        {
+            get
+            {
+                return modifiedBy;
+            }
+            set
+            {
+                modifiedBy = value;
+            }
+        }
+
+        /// <summary>
+        /// 创建新实例
+        /// </summary>
+        /// <returns>新实例</returns>
+        protected override BaseEntity CreateNew()
+        {
+            return new UserByIdentityEntity();
+        }
+
+
+        /// <summary>
+        /// 从数据行读取
+        /// </summary>
+        /// <param name="dataRow">数据行</param>
+        protected override BaseEntity GetFrom(IDataRow dr)
+        {
+            GetFromExpand(dr);
+            Id = BaseBusinessLogic.ConvertToInt(dr[UserByIdentityEntity.FieldId]);
+            FullName = BaseBusinessLogic.ConvertToString(dr[UserByIdentityEntity.FieldFullName]);
+            Salary = BaseBusinessLogic.ConvertToNullableDecimal(dr[UserByIdentityEntity.FieldSalary]);
+            Age = BaseBusinessLogic.ConvertToNullableInt(dr[UserByIdentityEntity.FieldAge]);
+            Birthday = BaseBusinessLogic.ConvertToNullableDateTime(dr[UserByIdentityEntity.FieldBirthday]);
+            Photo = BaseBusinessLogic.ConvertToByte(dr[UserByIdentityEntity.FieldPhoto]);
+            AllowEdit = BaseBusinessLogic.ConvertToNullableInt(dr[UserByIdentityEntity.FieldAllowEdit]);
+            AllowDelete = BaseBusinessLogic.ConvertToNullableInt(dr[UserByIdentityEntity.FieldAllowDelete]);
+            SortCode = BaseBusinessLogic.ConvertToInt(dr[UserByIdentityEntity.FieldSortCode]);
+            Enabled = BaseBusinessLogic.ConvertToNullableInt(dr[UserByIdentityEntity.FieldEnabled]);
+            DeletionStateCode = BaseBusinessLogic.ConvertToNullableInt(dr[UserByIdentityEntity.FieldDeletionStateCode]);
+            Description = BaseBusinessLogic.ConvertToString(dr[UserByIdentityEntity.FieldDescription]);
+            CreateOn = BaseBusinessLogic.ConvertToNullableDateTime(dr[UserByIdentityEntity.FieldCreateOn]);
+            CreateUserId = BaseBusinessLogic.ConvertToString(dr[UserByIdentityEntity.FieldCreateUserId]);
+            CreateBy = BaseBusinessLogic.ConvertToString(dr[UserByIdentityEntity.FieldCreateBy]);
+            ModifiedOn = BaseBusinessLogic.ConvertToNullableDateTime(dr[UserByIdentityEntity.FieldModifiedOn]);
+            ModifiedUserId = BaseBusinessLogic.ConvertToString(dr[UserByIdentityEntity.FieldModifiedUserId]);
+            ModifiedBy = BaseBusinessLogic.ConvertToString(dr[UserByIdentityEntity.FieldModifiedBy]);
+            return this;
+        }
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string TableName = "UserByIdentity";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldId = "Id";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldFullName = "FullName";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldSalary = "Salary";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldAge = "Age";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldBirthday = "Birthday";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldPhoto = "Photo";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldAllowEdit = "AllowEdit";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldAllowDelete = "AllowDelete";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldSortCode = "SortCode";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldEnabled = "Enabled";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldDeletionStateCode = "DeletionStateCode";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldDescription = "Description";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldCreateOn = "CreateOn";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldCreateUserId = "CreateUserId";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldCreateBy = "CreateBy";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldModifiedOn = "ModifiedOn";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldModifiedUserId = "ModifiedUserId";
+
+        ///<summary>
+        /// 
+        ///</summary>
+        public static string FieldModifiedBy = "ModifiedBy";
+    }
+}

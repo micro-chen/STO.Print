@@ -1,0 +1,66 @@
+c:\users\administrator\documents\visual studio 2012\Projects\BillPrinter\BillPrinter\bin\Debug\BillPrinter.exe.config
+c:\users\administrator\documents\visual studio 2012\Projects\BillPrinter\BillPrinter\bin\Debug\BillPrinter.exe
+c:\users\administrator\documents\visual studio 2012\Projects\BillPrinter\BillPrinter\bin\Debug\BillPrinter.pdb
+c:\users\administrator\documents\visual studio 2012\Projects\BillPrinter\BillPrinter\obj\Debug\BillPrinter.csprojResolveAssemblyReference.cache
+c:\users\administrator\documents\visual studio 2012\Projects\BillPrinter\BillPrinter\obj\Debug\BillPrinter.MainForm.resources
+c:\users\administrator\documents\visual studio 2012\Projects\BillPrinter\BillPrinter\obj\Debug\BillPrinter.Properties.Resources.resources
+c:\users\administrator\documents\visual studio 2012\Projects\BillPrinter\BillPrinter\obj\Debug\BillPrinter.csproj.GenerateResource.Cache
+c:\users\administrator\documents\visual studio 2012\Projects\BillPrinter\BillPrinter\obj\Debug\BillPrinter.exe
+c:\users\administrator\documents\visual studio 2012\Projects\BillPrinter\BillPrinter\obj\Debug\BillPrinter.pdb
+C:\Users\Administrator\documents\visual studio 2012\Projects\BillPrinter\BillPrinter\obj\Debug\BillPrinter.exe.licenses
+C:\Users\Administrator\documents\visual studio 2012\Projects\BillPrinter\BillPrinter\obj\Debug\BillPrinter.csproj.ResolveComReference.cache
+C:\Users\Administrator\documents\visual studio 2012\Projects\BillPrinter\BillPrinter\obj\Debug\BillPrinter.FrmDesigner.resources
+C:\Users\Administrator\documents\visual studio 2012\Projects\BillPrinter\BillPrinter\bin\Debug\Interop.grproLib.dll
+C:\Users\Administrator\documents\visual studio 2012\Projects\BillPrinter\BillPrinter\bin\Debug\AxInterop.grproLib.dll
+C:\Users\Administrator\documents\visual studio 2012\Projects\BillPrinter\BillPrinter\obj\Debug\Interop.grproLib.dll
+C:\Users\Administrator\documents\visual studio 2012\Projects\BillPrinter\BillPrinter\obj\Debug\AxInterop.grproLib.dll
+C:\Users\Administrator\documents\visual studio 2012\Projects\BillPrinter\BillPrinter\obj\Debug\BillPrinter.FrmPreview.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\BillPrinter\BillPrinter\obj\Debug\BillPrinter.FrmBillImage.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\BillPrinter\BillPrinter\bin\Debug\Interop.grdesLib.dll
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\BillPrinter\BillPrinter\bin\Debug\AxInterop.grdesLib.dll
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\BillPrinter\BillPrinter\obj\Debug\Interop.grdesLib.dll
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\BillPrinter\BillPrinter\obj\Debug\AxInterop.grdesLib.dll
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\bin\Debug\BillPrinter.exe.config
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\obj\Debug\Interop.grdesLib.dll
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\obj\Debug\Interop.grproLib.dll
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\obj\Debug\AxInterop.grdesLib.dll
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\obj\Debug\AxInterop.grproLib.dll
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\obj\Debug\BillPrinter.csproj.ResolveComReference.cache
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\obj\Debug\BillPrinter.exe
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\obj\Debug\BillPrinter.pdb
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\bin\Debug\BillPrinter.exe
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\bin\Debug\BillPrinter.pdb
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\bin\Debug\Interop.grdesLib.dll
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\bin\Debug\Interop.grproLib.dll
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\bin\Debug\AxInterop.grdesLib.dll
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\bin\Debug\AxInterop.grproLib.dll
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\obj\Debug\BillPrinter.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\obj\Debug\BillPrinter.FrmBillImage.resources
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\obj\Debug\BillPrinter.FrmDesigner.resources
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\obj\Debug\BillPrinter.FrmPreview.resources
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\obj\Debug\BillPrinter.MainForm.resources
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\obj\Debug\BillPrinter.Properties.Resources.resources
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\obj\Debug\BillPrinter.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\BillPrinter\BillPrinter\obj\Debug\BillPrinter.exe.licenses
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\bin\Debug\BillPrinter.exe.config
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\obj\Debug\Interop.grdesLib.dll
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\obj\Debug\Interop.grproLib.dll
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\obj\Debug\AxInterop.grdesLib.dll
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\obj\Debug\AxInterop.grproLib.dll
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\obj\Debug\BillPrinter.csproj.ResolveComReference.cache
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\obj\Debug\BillPrinter.exe
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\obj\Debug\BillPrinter.pdb
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\bin\Debug\BillPrinter.exe
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\bin\Debug\BillPrinter.pdb
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\bin\Debug\Interop.grdesLib.dll
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\bin\Debug\Interop.grproLib.dll
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\bin\Debug\AxInterop.grdesLib.dll
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\bin\Debug\AxInterop.grproLib.dll
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\obj\Debug\BillPrinter.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\obj\Debug\BillPrinter.FrmBillImage.resources
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\obj\Debug\BillPrinter.FrmDesigner.resources
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\obj\Debug\BillPrinter.FrmPreview.resources
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\obj\Debug\BillPrinter.MainForm.resources
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\obj\Debug\BillPrinter.Properties.Resources.resources
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\obj\Debug\BillPrinter.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\面单打印工具项目\BillPrinter\BillPrinter\obj\Debug\BillPrinter.exe.licenses
